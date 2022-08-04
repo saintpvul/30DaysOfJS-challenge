@@ -2,10 +2,14 @@
 
 /*
 
-Write another single comment which says, Welcome to 30DaysOfJavaScript
+Write a multiline comment which says, comments can make code readable, easy to reuse and informative
 
 */
 
 // Solution
 
-//  Welcome to 30DaysOfJavaScript
+/*
+
+ comments can make code readable, easy to reuse and informative
+
+*/
