@@ -8,4 +8,4 @@ Write a single line comment which says, comments can make code readable
 
 // Solution
 
-// Comment
+// comments can make code readable
