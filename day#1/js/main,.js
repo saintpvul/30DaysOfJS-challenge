@@ -2,10 +2,10 @@
 
 /*
 
-Write a single line comment which says, comments can make code readable
+Write another single comment which says, Welcome to 30DaysOfJavaScript
 
 */
 
 // Solution
 
-// comments can make code readable
+//  Welcome to 30DaysOfJavaScript
