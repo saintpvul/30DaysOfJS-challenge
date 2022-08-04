@@ -2,12 +2,11 @@
 
 /*
 
-Declare four variables without assigning values
-*/
+Declare four variables with assigned values*/
 
 // Solution
 
-let var1;
-let var2;
-let var3;
-let var4;
+let var1 = "string";
+let var2 = 2;
+let var3 = false;
+let var4 = undefined;
