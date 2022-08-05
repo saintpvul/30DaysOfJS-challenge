@@ -8,3 +8,6 @@ console.log(challenge.slice(0, 2))
 console.log(challenge.includes('Script'))
 console.log(challenge.split(""))
 console.log(challenge.split(" "))
+
+let ITCompanies = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
+console.log(ITCompanies.split(','))
