@@ -2,12 +2,13 @@
 
 /*
 
-Use match() method to find all the a’s in 30 Days Of JavaScript
+Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
 
 */
 
 
 // Solution
 
-let jsStr = '30 Days Of JavaScript'
-console.log(jsStr.match(/a/gi))
+let days = '30 Days Of '
+let js = 'JavaScript'
+console.log(days.concat(js))
