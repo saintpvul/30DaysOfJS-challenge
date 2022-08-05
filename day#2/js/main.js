@@ -11,3 +11,4 @@ console.log(challenge.split(" "))
 
 let ITCompanies = "Facebook, Google, Microsoft, Apple, IBM, Oracle, Amazon"
 console.log(ITCompanies.split(','))
+console.log(challenge.replace('JavaScript', 'Python'))
