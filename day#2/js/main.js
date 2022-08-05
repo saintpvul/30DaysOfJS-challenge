@@ -2,7 +2,7 @@
 
 /*
 
-Use endsWith() method with the string 30 Days Of JavaScript and make the result true
+Use match() method to find all the a’s in 30 Days Of JavaScript
 
 */
 
@@ -10,4 +10,4 @@ Use endsWith() method with the string 30 Days Of JavaScript and make the result 
 // Solution
 
 let jsStr = '30 Days Of JavaScript'
-console.log(jsStr.endsWith('Script'))
+console.log(jsStr.match(/a/gi))
