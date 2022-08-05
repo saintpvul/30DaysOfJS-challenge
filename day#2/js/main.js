@@ -2,13 +2,12 @@
 
 /*
 
-Use concat() and merge '30 Days of' and 'JavaScript' to a single string, '30 Days Of JavaScript'
+Use repeat() method to print 30 Days Of JavaScript 2 times
 
 */
 
 
 // Solution
 
-let days = '30 Days Of '
-let js = 'JavaScript'
-console.log(days.concat(js))
+let jsDays = '30 Days Of JavaScript'
+console.log(jsDays.repeat(2))
