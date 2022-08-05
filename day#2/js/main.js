@@ -2,7 +2,7 @@
 
 /*
 
-Use startsWith() method with the string 30 Days Of JavaScript and make the result true
+Use endsWith() method with the string 30 Days Of JavaScript and make the result true
 
 */
 
@@ -10,4 +10,4 @@ Use startsWith() method with the string 30 Days Of JavaScript and make the resul
 // Solution
 
 let jsStr = '30 Days Of JavaScript'
-console.log(jsStr.startsWith('30'))
+console.log(jsStr.endsWith('Script'))
