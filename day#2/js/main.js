@@ -2,13 +2,11 @@
 
 /*
 
-Generate a random number between 0 and 255 inclusively.
+Access the 'JavaScript' string characters using a random number.
 
 */
 
 // Solution
 
-function getRandomInt(min, max) {
-  console.log(Math.floor(Math.random() * (max - min + 1)) + min);
-}
-getRandomInt(0, 255);
+let str = "JavaScript";
+console.log(str.charAt(Math.floor(Math.random() * str.length)));
