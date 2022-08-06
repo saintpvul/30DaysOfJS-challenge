@@ -2,15 +2,13 @@
 
 /*
 
-I hope this course is not full of jargon. Check if jargon is in the sentence.
+Generate a random number between 0 and 100 inclusively.
 
 */
 
 // Solution
 
-let str = "I hope this course is not full of jargon.";
-if (str.includes("jargon")) {
-  console.log("Jargon is in the sentence.");
-} else {
-  console.log("Jargon is not in the sentence.");
-}
+let random = Math.random();
+let toHundret = random * 101;
+let floorHundret = Math.floor(toHundret);
+console.log("Your random number is " + floorHundret);
