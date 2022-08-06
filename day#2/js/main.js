@@ -9,5 +9,5 @@
 // Solution
 
 let str =
-  "Love is the best thing in this world. Some found their love and some are still looking for their love.";
-console.log(str.match(/love/gi));
+  "You cannot end a sentence with because because because is a conjunction";
+console.log(str.match(/because/gi));
