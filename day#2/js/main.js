@@ -2,16 +2,15 @@
 
 /*
 
-Check if 'on' is found in both python and jargon
+I hope this course is not full of jargon. Check if jargon is in the sentence.
 
 */
 
 // Solution
 
-let python = "python",
-  jargon = "jargon";
-if (python.includes("on") && jargon.includes("on")) {
-  console.log(python + " and " + jargon + ' includes "on".');
+let str = "I hope this course is not full of jargon.";
+if (str.includes("jargon")) {
+  console.log("Jargon is in the sentence.");
 } else {
-  console.log('"on" is not include.');
+  console.log("Jargon is not in the sentence.");
 }
