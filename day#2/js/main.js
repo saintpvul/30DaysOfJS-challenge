@@ -2,14 +2,12 @@
 
 /*
 
-Use substr to slice out the phrase because because because from the following sentence:'You cannot end a sentence with because because because is a conjunction'
+'Love is the best thing in this world. Some found their love and some are still looking for their love.' Count the number of word love in this sentence.
 
 */
 
 // Solution
 
 let str =
-  "You cannot end a sentence with because because because is a conjunction";
-let strSubsOne = str.substring(0, 39);
-let strSubsTwo = str.substring(55, 71);
-console.log(strSubsOne.concat(strSubsTwo));
+  "Love is the best thing in this world. Some found their love and some are still looking for their love.";
+console.log(str.match(/love/gi));
