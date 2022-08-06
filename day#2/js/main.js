@@ -2,13 +2,13 @@
 
 /*
 
-Generate a random number between 0 and 100 inclusively.
+Generate a random number between 50 and 100 inclusively.
 
 */
 
 // Solution
 
-let random = Math.random();
-let toHundret = random * 101;
-let floorHundret = Math.floor(toHundret);
-console.log("Your random number is " + floorHundret);
+function getRandomInt(min, max) {
+  console.log(Math.floor(Math.random() * (max - min + 1)) + min);
+}
+getRandomInt(50, 100);
