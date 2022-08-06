@@ -2,7 +2,7 @@
 
 /*
 
-Generate a random number between 50 and 100 inclusively.
+Generate a random number between 0 and 255 inclusively.
 
 */
 
@@ -11,4 +11,4 @@ Generate a random number between 50 and 100 inclusively.
 function getRandomInt(min, max) {
   console.log(Math.floor(Math.random() * (max - min + 1)) + min);
 }
-getRandomInt(50, 100);
+getRandomInt(0, 255);
