@@ -2,12 +2,16 @@
 
 /*
 
-Check if parseFloat('9.8') is equal to 10 if not make it exactly equal with 10.
+Check if 'on' is found in both python and jargon
 
 */
 
 // Solution
 
-let almostTen = 9.8;
-if (parseFloat(almostTen) === 10) console.log(true);
-else console.log(almostTen + " is " + Math.ceil(almostTen) + " now.");
+let python = "python",
+  jargon = "jargon";
+if (python.includes("on") && jargon.includes("on")) {
+  console.log(python + " and " + jargon + ' includes "on".');
+} else {
+  console.log('"on" is not include.');
+}
