@@ -3,12 +3,16 @@
 /*
 
 Write a script that prompt the user to enter base and height of the triangle and calculate an area of a triangle (area = 0.5 x b x h).
+=======
+Write a script that prompt the user to enter side a, side b, and side c of the triangle and and calculate the perimeter of triangle (perimeter = a + b + c)
+
 
 */
 
 // Solution
-let base = prompt("Enter base of your triangle: ");
-let height = prompt("Enter height of your trianle: ");
-let area = 0.5 * base * height;
+let a = prompt("Enter side a: ");
+let b = prompt("Enter side b: ");
+let c = prompt("Enter side c: ");
+let perimeter = +a + +b + +c;
 
-console.log("The area of the triangle is " + area);
+console.log("The perimeter of the triangle is " + perimeter);
