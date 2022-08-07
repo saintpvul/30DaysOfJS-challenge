@@ -7,21 +7,8 @@ Use the Date object to do the following activities
 */
 
 // Solution
-let date = new Date();
-let i = date.getFullYear();
-let ii = date.getMonth();
-let iii = date.getDate();
-let iv = date.getDay();
-let v = date.getHours();
-let vi = date.getMinutes();
-let vii = date.getTime();
+let base = prompt("Enter base of your triangle: ");
+let height = prompt("Enter height of your trianle: ");
+let area = 0.5 * base * height;
 
-console.log(
-  "Year " + i,
-  "Month " + ii,
-  "Date " + iii,
-  "Day " + iv,
-  "Hours " + v,
-  "Minutes " + vi,
-  "Time from january 1970 " + vii
-);
+console.log("The area of the triangle is " + area);
