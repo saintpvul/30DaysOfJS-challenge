@@ -2,35 +2,24 @@
 
 /*
 
-Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
+Create a human readable time format using the Date time object
 
 */
 
 // Solutionc
 
-let birth = prompt("Enter number of years you live :");
-let oneMinute = 60;
-let oneHour = oneMinute * 60;
-let oneDay = oneHour * 24;
-let oneYear = oneDay * 365;
-let secondOfLive = +birth * oneYear;
-if (secondOfLive >= oneYear * 100)
-  console.log(
-    "You live such a long live. In seconds it would be " +
-      secondOfLive +
-      " seconds."
-  );
-else if (secondOfLive >= oneYear * 50 && secondOfLive < oneYear * 100)
-  console.log(
-    "Your live includes " +
-      secondOfLive +
-      " seconds. It is somwhere between 50 and 100 years. We won't tell anyone."
-  );
-else if (secondOfLive >= oneYear * 25 && secondOfLive < oneYear * 50)
-  console.log(
-    "You live not so long live, i should say. Just " +
-      secondOfLive +
-      " seconds."
-  );
-else
-  console.log("You are so young. You live only " + secondOfLive + " seconds.");
+let date = new Date();
+let year = date.getFullYear();
+let month = ("0" + (date.getMonth() + 1)).slice(-2);
+let day = ("0" + (date.getDay() + 1)).slice(-2);
+let hour = ("0" + (date.getHours() + 1)).slice(-2);
+let minute = ("0" + (date.getMinutes() + 1)).slice(-2);
+
+let i = year + "-" + month + "-" + day + " " + hour + ":" + minute;
+console.log(i);
+
+let ii = day + "-" + month + "-" + year + " " + hour + ":" + minute;
+console.log(ii);
+
+let iii = day + "/" + month + "/" + year + " " + hour + ":" + minute;
+console.log(iii);
