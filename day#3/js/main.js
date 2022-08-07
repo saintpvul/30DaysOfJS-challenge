@@ -8,7 +8,8 @@ Check if type of '10' is equal to 10
 
 // Solution
 
-let almostTen = "9.8";
-if (parseInt(almostTen) === 10) console.log("True");
-else console.log("Not true");
-console.log(parseInt(almostTen));
+let hundret = 100;
+let fivePlus = 5 + hundret;
+let twenty = 20;
+
+console.log(hundret < fivePlus, fivePlus != twenty, !twenty <= hundret);
