@@ -2,20 +2,20 @@
 
 /*
 
-Create a human readable time format using the Date time object. The hour and the minute should be all the time two digits(7 hours should be 07 and 5 minutes should be 05 )
-
-i. YYY-MM-DD HH:mm eg. 20120-01-02 07:05
+Calculate the value of y (y = x2 + 6x + 9). Try to use different x values and figure out at what x value y is 0.
 
 */
 
 // Solutionc
 
-let date = new Date();
-let year = ("0" + (date.getFullYear() + 1)).slice(-3);
-let month = ("0" + (date.getMonth() + 1)).slice(-2);
-let day = ("0" + (date.getDay() + 1)).slice(-2);
-let hour = ("0" + (date.getHours() + 1)).slice(-2);
-let minute = ("0" + (date.getMinutes() + 1)).slice(-3);
+let x1 = 13;
+let y1 = x * 2 + 6 * x + 9;
+console.log(y1);
 
-let i = year + "-" + month + "-" + day + " " + hour + ":" + minute;
-console.log(i);
+let x2 = 31;
+let y2 = x * 2 + 6 * x + 9;
+console.log(y2);
+
+let x3 = 1;
+let y3 = x * 2 + 6 * x + 9;
+console.log(y3);
