@@ -2,34 +2,35 @@
 
 /*
 
-Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
+Write a script that prompt the user to enter number of years. Calculate the number of seconds a person can live. Assume some one lives just hundred years
 
 */
 
 // Solutionc
 
-let birth = prompt("Enter your year of birth :");
-let date = new Date().getFullYear();
-let age = date - +birth;
-let allow = 18;
-if (age >= allow)
-  console.log("You are " + age + ". You are old enough to drive.");
-else if (age > 5 && age < 12)
+let birth = prompt("Enter number of years you live :");
+let oneMinute = 60;
+let oneHour = oneMinute * 60;
+let oneDay = oneHour * 24;
+let oneYear = oneDay * 365;
+let secondOfLive = +birth * oneYear;
+if (secondOfLive >= oneYear * 100)
   console.log(
-    "Hey kid, are you " + age + " years old? Whooh, where is your mommy?"
+    "You live such a long live. In seconds it would be " +
+      secondOfLive +
+      " seconds."
   );
-else if (age >= 0 && age <= 5)
+else if (secondOfLive >= oneYear * 50 && secondOfLive < oneYear * 100)
   console.log(
-    "Seriously. You are " +
-      age +
-      "years old? I'm here to calculate that shit, dude"
+    "Your live includes " +
+      secondOfLive +
+      " seconds. It is somwhere between 50 and 100 years. We won't tell anyone."
   );
-else if (age < allow)
+else if (secondOfLive >= oneYear * 25 && secondOfLive < oneYear * 50)
   console.log(
-    "You are " +
-      age +
-      ". You will be allowed to drive after " +
-      (allow - age) +
-      " years."
+    "You live not so long live, i should say. Just " +
+      secondOfLive +
+      " seconds."
   );
-else console.log("Your age is not indentified");
+else
+  console.log("You are so young. You live only " + secondOfLive + " seconds.");
