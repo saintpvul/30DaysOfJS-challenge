@@ -2,26 +2,25 @@
 
 /*
 
-Check if type of '10' is equal to 10
+Figure out the result of the following expressions first without using console.log(). After you decide the result confirm it by using console.log()
 
 */
 
 // Solution
 
-let i = 4 > 3; // true
-let ii = 4 >= 3; // true
-let iii = 4 < 3; //false
-let iv = 4 <= 3; //false
-let v = 4 == 4; // true
-let vi = 4 === 4; // true
-let vii = 4 != 4; // false
-let viii = 4 !== 4; //false
-let ix = 4 != "4"; // false
-let x = 4 == "4"; //true
+let i = 4 > 3 && 10 < 12; // true
+let ii = 4 >= 3 && 10 > 12; // false
+let iii = 4 < 3 || 10 < 12; // true
+let iv = 4 <= 3 || 10 > 12; //false
+let v = !(4 > 3); // false
+let vi = !(4 < 3); // true
+let vii = !false; // true
+let viii = !(4 > 3 && 10 < 12); //false
+let ix = !(4 > 3 && 10 > 12); // true
+let x = !(4 === "4"); //true
 let xi = 4 === "4"; // false
 let python = "python",
-  jargon = "jargon";
-python.length == jargon.length; // true
+  dragon = "dragon"; // true
 
 console.log(
   i,
@@ -35,5 +34,5 @@ console.log(
   ix,
   x,
   xi,
-  python.length === jargon.length
+  python.includes("on") && dragon.includes("on")
 );
