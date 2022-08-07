@@ -2,22 +2,34 @@
 
 /*
 
-Compare your first name length and your family name length and you should get this output.
+Using prompt get the year the user was born and if the user is 18 or above allow the user to drive if not tell the user to wait a certain amount of years.
 
 */
 
 // Solutionc
 
-let yourAge = prompt("Enter your age :");
-let myAge = prompt("And my age is :");
-if (yourAge === "" || myAge === "") console.log("You should enter numbers");
-else if (+yourAge === +myAge + 1)
-  console.log("I am " + (+myAge - +yourAge) + " year older than you");
-else if (+yourAge + 1 === +myAge)
-  console.log("I am " + (+myAge - +yourAge) + " year older than you");
-else if (+yourAge > +myAge && +yourAge !== +myAge + 1)
-  console.log("You are " + (+yourAge - +myAge) + " years older than me");
-else if (+yourAge < +myAge && +yourAge + 1 !== +myAge)
-  console.log("I am " + (+myAge - +yourAge) + " years older than you");
-else if (+yourAge === +myAge) console.log("We are peers");
-else console.log("Can't calculate this numbers");
+let birth = prompt("Enter your year of birth :");
+let date = new Date().getFullYear();
+let age = date - +birth;
+let allow = 18;
+if (age >= allow)
+  console.log("You are " + age + ". You are old enough to drive.");
+else if (age > 5 && age < 12)
+  console.log(
+    "Hey kid, are you " + age + " years old? Whooh, where is your mommy?"
+  );
+else if (age >= 0 && age <= 5)
+  console.log(
+    "Seriously. You are " +
+      age +
+      "years old? I'm here to calculate that shit, dude"
+  );
+else if (age < allow)
+  console.log(
+    "You are " +
+      age +
+      ". You will be allowed to drive after " +
+      (allow - age) +
+      " years."
+  );
+else console.log("Your age is not indentified");
