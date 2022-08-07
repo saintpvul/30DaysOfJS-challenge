@@ -2,13 +2,25 @@
 
 /*
 
-If the length of your name is greater than 7 say, your name is long else say your name is short.
-
+Compare your first name length and your family name length and you should get this output.
 
 */
 
 // Solutionc
 
-let useName = prompt("Enter your name: ");
-if (useName.length < 7) console.log("Your name is short");
-else console.log("Your name is large");
+let firstName = prompt("Enter your first name:");
+let lastName = prompt("Enter your last name:");
+if (firstName.length > lastName.length)
+  console.log(
+    "Your first name " +
+      firstName +
+      " is longer than your last name " +
+      lastName
+  );
+else
+  console.log(
+    "Your last name " +
+      lastName +
+      " is longer than your first name " +
+      firstName
+  );
