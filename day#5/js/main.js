@@ -2,7 +2,7 @@
 
 /*
 
-Print the first company, middle and last company
+Print out each company
 
 */
 
@@ -17,8 +17,10 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-console.log(itCompanies);
-console.log(itCompanies.length);
-console.log(itCompanies.shift());
+console.log(itCompanies[0]);
+console.log(itCompanies[1]);
+console.log(itCompanies[2]);
+console.log(itCompanies[3]);
 console.log(itCompanies[4]);
-console.log(itCompanies.pop());
+console.log(itCompanies[5]);
+console.log(itCompanies[6]);
