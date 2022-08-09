@@ -2,7 +2,7 @@
 
 /*
 
-Print out each company
+Change each company name to uppercase one by one and print them out
 
 */
 
@@ -17,10 +17,10 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-console.log(itCompanies[0]);
-console.log(itCompanies[1]);
-console.log(itCompanies[2]);
-console.log(itCompanies[3]);
-console.log(itCompanies[4]);
-console.log(itCompanies[5]);
-console.log(itCompanies[6]);
+console.log(itCompanies[0].toUpperCase());
+console.log(itCompanies[1].toUpperCase());
+console.log(itCompanies[2].toUpperCase());
+console.log(itCompanies[3].toUpperCase());
+console.log(itCompanies[4].toUpperCase());
+console.log(itCompanies[5].toUpperCase());
+console.log(itCompanies[6].toUpperCase());
