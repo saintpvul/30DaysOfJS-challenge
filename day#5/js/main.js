@@ -2,7 +2,7 @@
 
 /*
 
-Print the number of companies in the array
+Print the first company, middle and last company
 
 */
 
@@ -19,3 +19,6 @@ let itCompanies = [
 ];
 console.log(itCompanies);
 console.log(itCompanies.length);
+console.log(itCompanies.shift());
+console.log(itCompanies[4]);
+console.log(itCompanies.pop());
