@@ -2,23 +2,28 @@
 
 /*
 
-Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
+Write a code which can give grades to students according to theirs scores:
+80-100, A
+70-89, B
+60-69, C
+50-59, D
+0-49, F
 
-Enter a number: 2
-2 is an even number
-
-Enter a number: 9
-9 is is an odd number.
 
 */
 
 // Solution
 
-function even(a) {
-  if (a % 2 === 0) console.log(a + " is an even number");
-  else console.log(a + " is an odd number");
+function grade(score) {
+  if (score >= 0 && score <= 49) console.log("F");
+  else if (score >= 50 && score <= 59) console.log("D");
+  else if (score >= 60 && score <= 69) console.log("C");
+  else if (score >= 70 && score <= 89) console.log("B");
+  else if (score >= 90 && score <= 100) console.log("A");
 }
-even(12);
-even(11);
-even(123 * 121);
-even(123 + 121);
+
+grade(13);
+grade(67);
+grade(78);
+grade(96);
+grade(53);
