@@ -2,7 +2,7 @@
 
 /*
 
-Print the array like as a sentence: Facebook, Google, Microsoft, Apple, IBM,Oracle and Amazon are big IT companies.
+Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found
 
 */
 
@@ -17,4 +17,13 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-console.log(itCompanies.join(", ") + " are big IT companies.");
+function check(company) {
+  if (itCompanies.includes(company)) console.log(company);
+  else console.log(company + " is not found");
+}
+
+check("IBM");
+check("Dell");
+check("SpaseX");
+check("Apple");
+check("Facebook");
