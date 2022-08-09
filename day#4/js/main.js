@@ -2,32 +2,38 @@
 
 /*
 
-Check if the season is Autumn, Winter, Spring or Summer. If the user input is :
-September, October or November, the season is Autumn.
-December, January or February, the season is Winter.
-March, April or May, the season is Spring
-June, July or August, the season is Summer
+Check if a day is weekend day or a working day. Your script will take day as an input.
+
+    What is the day  today? Saturday
+    Saturday is a weekend.
+
+    What is the day today? saturDaY
+    Saturday is a weekend.
+
+    What is the day today? Friday
+    Friday is a working day.
+
+    What is the day today? FrIDAy
+    Friday is a working day.
 
 */
 
 // Solution
-let getMonth = prompt("Enter current month: ");
-let removeSpaces = getMonth.trim();
-let findMonth = removeSpaces.toLowerCase();
-if (
-  findMonth === "september" ||
-  findMonth === "october" ||
-  findMonth === "november"
-)
-  console.log("This is Autumn");
+let getDay = prompt("What is the day today?");
+let removeSpaces = getDay.trim();
+let findDay = removeSpaces.toLowerCase();
+if (findDay === "saturday" || findDay === "sunday")
+  console.log(
+    findDay.charAt(0).toUpperCase() + findDay.slice(1) + " is a weekend"
+  );
 else if (
-  findMonth === "december" ||
-  findMonth === "january" ||
-  findMonth === "february"
+  findDay === "monday" ||
+  findDay === "tuesday" ||
+  findDay === "wednesday" ||
+  findDay === "thursday" ||
+  findDay === "friday"
 )
-  console.log("This is Winter");
-else if (findMonth === "march" || findMonth === "april" || findMonth === "may")
-  console.log("This is Spring");
-else if (findMonth === "june" || findMonth === "july" || findMonth === "august")
-  console.log("This is Summer");
-else console.log("Is this a month? Try again");
+  console.log(
+    findDay.charAt(0).toUpperCase() + findDay.slice(1) + " is a working day"
+  );
+else console.log("Is " + findDay + " a day? Try again");
