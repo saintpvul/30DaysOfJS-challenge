@@ -2,7 +2,7 @@
 
 /*
 
-Print the array using console.log()
+Print the number of companies in the array
 
 */
 
@@ -18,3 +18,4 @@ let itCompanies = [
   "Amazon",
 ];
 console.log(itCompanies);
+console.log(itCompanies.length);
