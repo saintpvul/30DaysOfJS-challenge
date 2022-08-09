@@ -2,10 +2,11 @@
 
 /*
 
-Declare an array with more than 5 number of elements
+Find the length of your array
 
 */
 
 // Solution
 
 let arr = [1, 2, 3, 4, 5, 6];
+console.log(arr.length);
