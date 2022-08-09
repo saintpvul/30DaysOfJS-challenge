@@ -1,39 +1,50 @@
-// Day 4
+// month 4
 
 /*
 
-Check if a day is weekend day or a working day. Your script will take day as an input.
+Write a program which tells the number of months in a month.
 
-    What is the day  today? Saturday
-    Saturday is a weekend.
+ Enter a month: January
+  January has 31 months.
 
-    What is the day today? saturDaY
-    Saturday is a weekend.
+  Enter a month: JANUARY
+  January has 31 month
 
-    What is the day today? Friday
-    Friday is a working day.
+  Enter a month: February
+  February has 28 months.
 
-    What is the day today? FrIDAy
-    Friday is a working day.
+  Enter a month: FEbruary
+  February has 28 months.
 
 */
 
 // Solution
-let getDay = prompt("What is the day today?");
-let removeSpaces = getDay.trim();
-let findDay = removeSpaces.toLowerCase();
-if (findDay === "saturday" || findDay === "sunday")
-  console.log(
-    findDay.charAt(0).toUpperCase() + findDay.slice(1) + " is a weekend"
-  );
-else if (
-  findDay === "monday" ||
-  findDay === "tuesday" ||
-  findDay === "wednesday" ||
-  findDay === "thursday" ||
-  findDay === "friday"
+let getMonth = prompt("Enter a month:");
+let removeSpaces = getMonth.trim();
+let findmonth = removeSpaces.toLowerCase();
+if (
+  findmonth === "january" ||
+  findmonth === "march" ||
+  findmonth === "may" ||
+  findmonth === "july" ||
+  findmonth === "august" ||
+  findmonth === "october" ||
+  findmonth === "december"
 )
   console.log(
-    findDay.charAt(0).toUpperCase() + findDay.slice(1) + " is a working day"
+    findmonth.charAt(0).toUpperCase() + findmonth.slice(1) + " has 31 days."
   );
-else console.log("Is " + findDay + " a day? Try again");
+else if (
+  findmonth === "september" ||
+  findmonth === "april" ||
+  findmonth === "june" ||
+  findmonth === "november"
+)
+  console.log(
+    findmonth.charAt(0).toUpperCase() + findmonth.slice(1) + " has 30 days."
+  );
+else if (findmonth === "february")
+  console.log(
+    findmonth.charAt(0).toUpperCase() + findmonth.slice(1) + " has 28 days."
+  );
+else console.log("Is " + findmonth.toUpperCase() + " a month? Try again");
