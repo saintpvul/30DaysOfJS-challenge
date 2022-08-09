@@ -2,17 +2,23 @@
 
 /*
 
-If a is greater than b return 'a is greater than b' else 'a is less than b'. Try to implement it in to ways
+Even numbers are divisible by 2 and the remainder is zero. How do you check, if a number is even or not using JavaScript?
 
-using if else
-ternary operator.
+Enter a number: 2
+2 is an even number
+
+Enter a number: 9
+9 is is an odd number.
 
 */
 
 // Solution
 
-let a = 4;
-let b = 3;
-if (a > b) console.log("a is greater than b");
-else if (a === b) console.log("a and b is equal");
-else console.log("a is less than b");
+function even(a) {
+  if (a % 2 === 0) console.log(a + " is an even number");
+  else console.log(a + " is an odd number");
+}
+even(12);
+even(11);
+even(123 * 121);
+even(123 + 121);
