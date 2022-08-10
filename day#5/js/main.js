@@ -17,5 +17,5 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-let splice = itCompanies.splice(3, 1);
+let splice = itCompanies.pop();
 console.log(itCompanies);
