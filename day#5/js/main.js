@@ -2,7 +2,7 @@
 
 /*
 
-Check if a certain company exists in the itCompanies array. If it exist return the company else return a company is not found
+Sort the array using sort() method
 
 */
 
@@ -17,13 +17,4 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-function check(company) {
-  if (itCompanies.includes(company)) console.log(company);
-  else console.log(company + " is not found");
-}
-
-check("IBM");
-check("Dell");
-check("SpaseX");
-check("Apple");
-check("Facebook");
+console.log(itCompanies.sort());
