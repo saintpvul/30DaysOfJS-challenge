@@ -2,7 +2,7 @@
 
 /*
 
-Remove the first IT company from the array
+Remove the middle IT company or companies from the array
 
 */
 
@@ -17,5 +17,5 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-let shift = itCompanies.shift();
+let splice = itCompanies.splice(3, 1);
 console.log(itCompanies);
