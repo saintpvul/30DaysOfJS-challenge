@@ -2,7 +2,7 @@
 
 /*
 
-Slice out the middle IT company or companies from the array
+Remove the first IT company from the array
 
 */
 
@@ -17,4 +17,5 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-console.log(itCompanies.slice(3, 4));
+let shift = itCompanies.shift();
+console.log(itCompanies);
