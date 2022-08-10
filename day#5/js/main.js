@@ -2,7 +2,7 @@
 
 /*
 
-Sort the array using sort() method
+Reverse the array using reverse() method
 
 */
 
@@ -17,4 +17,4 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-console.log(itCompanies.sort());
+console.log(itCompanies.reverse());
