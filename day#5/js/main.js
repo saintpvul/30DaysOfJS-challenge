@@ -2,7 +2,7 @@
 
 /*
 
-Remove the middle IT company or companies from the array
+Remove all IT companies
 
 */
 
@@ -17,5 +17,4 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-let splice = itCompanies.pop();
-console.log(itCompanies);
+console.log(itCompanies.slice(0, 0));
