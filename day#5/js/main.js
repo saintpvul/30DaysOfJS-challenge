@@ -2,7 +2,7 @@
 
 /*
 
-Reverse the array using reverse() method
+Slice out the first 3 companies from the array
 
 */
 
@@ -17,4 +17,4 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-console.log(itCompanies.reverse());
+console.log(itCompanies.slice(0, 3));
