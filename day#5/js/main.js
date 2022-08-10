@@ -2,7 +2,7 @@
 
 /*
 
-Slice out the last 3 companies from the array
+Slice out the middle IT company or companies from the array
 
 */
 
@@ -17,4 +17,4 @@ let itCompanies = [
   "Oracle",
   "Amazon",
 ];
-console.log(itCompanies.slice(4, 7));
+console.log(itCompanies.slice(3, 4));
