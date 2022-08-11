@@ -2,25 +2,28 @@
 
 /*
 
-First remove all the punctuations and change the string to array and count the number of words in the array
+In the following shopping cart add, remove, edit items
 
-let text =
-'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
-console.log(words)
-console.log(words.length)
+const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
 
-["I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", "JS", "React", "Python"]
-
-13
+-add 'Meat' in the beginning of your shopping cart if it has not been already added
+-add Sugar at the end of you shopping cart if it has not been already added
+-remove 'Honey' if you are allergic to honey
+-modify Tea to 'Green Tea'
 
 */
 
 // Solution
 
-let text =
-  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
-let removePunct = text.replace(/[^\w\s\']|_/g, "");
-let splitStr = removePunct.split(" ");
-let countArr = splitStr.length;
-console.log(splitStr);
-console.log(countArr);
+const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
+const allergic = true;
+let indexOf = shoppingCart.indexOf("Tea");
+if (indexOf !== -1) shoppingCart[indexOf] = "Green Tea";
+if (!shoppingCart.includes("Meat")) shoppingCart.unshift("Meat");
+if (!shoppingCart.includes("Sugar")) shoppingCart.push("Sugar");
+if (allergic === true)
+  shoppingCart.splice(
+    shoppingCart.findIndex((elem) => elem === "Honey"),
+    1
+  );
+console.log(shoppingCart);
