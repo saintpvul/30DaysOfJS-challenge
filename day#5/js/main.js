@@ -20,5 +20,9 @@ console.log(countries);
 
 import webTechs from "./web_techs.js";
 console.log(webTechs);
-if (!countries.includes("Ethiopia")) console.log(countries.push("Ethiopia"));
-else console.log("ETHIOPIA");
+
+let getInd = webTechs.findIndex((elem) => elem === "Sass");
+if (webTechs.includes("Sass"))
+  console.log(webTechs[getInd] + " is a CSS preprocess");
+else webTechs.push("Sass");
+console.log(webTechs);
