@@ -14,30 +14,26 @@ The following is an array of 10 students ages:
 
 // Solution
 
-const ages = [19, 22, 19, 24, 20, 25, 26, 24, 25, 24];
+import countries from "./countries.js";
+console.log(countries);
 
-let sort = ages.sort();
-let min = Math.min(...ages);
-let max = Math.max(...ages);
-console.log(sort);
-console.log(min);
-console.log(max);
+import webTechs from "./web_techs.js";
+console.log(webTechs);
 
-let getMid = Math.floor(sort.length / 2);
-let median = (sort[getMid] + sort[getMid] - 1) / 2;
-console.log(median);
+let sliceTen = countries.slice(0, 10);
+console.log(sliceTen);
 
-let average = sort.reduce((a, b) => a + b, 0) / sort.length;
-console.log(average);
+const midNdx = countries[Math.round((countries.length - 1) / 2)];
+console.log(midNdx);
 
-let range = max - min;
-console.log(range);
-
-let minAve = Math.abs(min - average);
-let maxAve = Math.abs(max - average);
-if (minAve > maxAve)
-  console.log("Minimum average is larger than maximum average");
-else if (minAve < maxAve)
-  console.log("Minimum average is less than maximum average");
-else if (minAve === maxAve) console.log("They are equal");
-else console.log("Something went wrong");
+let odd = [];
+let even = [];
+for (let i = 0; i < countries.length; i++) {
+  if ((i + 2) % 2 == 0) {
+    odd.push(countries[i]);
+  } else {
+    even.push(countries[i]);
+  }
+}
+console.log(odd);
+console.log(even);
