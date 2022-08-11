@@ -15,15 +15,10 @@ const shoppingCart = ['Milk', 'Coffee', 'Tea', 'Honey']
 
 // Solution
 
-const shoppingCart = ["Milk", "Coffee", "Tea", "Honey"];
-const allergic = true;
-let indexOf = shoppingCart.indexOf("Tea");
-if (indexOf !== -1) shoppingCart[indexOf] = "Green Tea";
-if (!shoppingCart.includes("Meat")) shoppingCart.unshift("Meat");
-if (!shoppingCart.includes("Sugar")) shoppingCart.push("Sugar");
-if (allergic === true)
-  shoppingCart.splice(
-    shoppingCart.findIndex((elem) => elem === "Honey"),
-    1
-  );
-console.log(shoppingCart);
+import countries from "./countries.js";
+console.log(countries);
+
+import webTechs from "./web_techs.js";
+console.log(webTechs);
+if (!countries.includes("Ethiopia")) console.log(countries.push("Ethiopia"));
+else console.log("ETHIOPIA");
