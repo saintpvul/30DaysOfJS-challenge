@@ -2,14 +2,25 @@
 
 /*
 
-Create a separate countries.js file and store the countries array in to this file, create a separate file web_techs.js and store the webTechs array in to this file. Access both file in main.js file
+First remove all the punctuations and change the string to array and count the number of words in the array
+
+let text =
+'I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.'
+console.log(words)
+console.log(words.length)
+
+["I", "love", "teaching", "and", "empowering", "people", "I", "teach", "HTML", "CSS", "JS", "React", "Python"]
+
+13
 
 */
 
 // Solution
 
-import countries from "./countries.js";
-console.log(countries);
-
-import webTechs from "./web_techs.js";
-console.log(webTechs);
+let text =
+  "I love teaching and empowering people. I teach HTML, CSS, JS, React, Python.";
+let removePunct = text.replace(/[^\w\s\']|_/g, "");
+let splitStr = removePunct.split(" ");
+let countArr = splitStr.length;
+console.log(splitStr);
+console.log(countArr);
