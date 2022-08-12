@@ -2,7 +2,7 @@
 
 /*
 
-Iterate 0 to 10 using for loop, do the same using while and do while loop
+Iterate 10 to 0 using for loop, do the same using while and do while loop
 
 
 */
