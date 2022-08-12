@@ -2,16 +2,25 @@
 
 /*
 
-Iterate 0 to n using for loop
+Write a loop that makes the following pattern using console.log():
+
+  #
+  ##
+  ###
+  ####
+  #####
+  ######
+  #######
 
 
 */
 
-// Solution
+// Solution;
 
-function toN(n) {
-  for (let i = 0; i <= n; i++) {
-    console.log(i);
+for (let i = 1; i < 8; i = i + 1) {
+  let str = "";
+  for (let j = 0; j < i; j = j + 1) {
+    str += "#";
   }
+  console.log(str);
 }
-toN(12);
