@@ -1,15 +1,22 @@
 // DAY 6
 
 /*
-Develop a small script which generate array of 5 random numbers and the numbers must be unique
+
+Develop a small script which generate a six characters random id:
 
 */
 
 // Solution;
 
-var arr = [];
-while (arr.length < 5) {
-  var r = Math.floor(Math.random() * 100) + 1;
-  if (arr.indexOf(r) === -1) arr.push(r);
+function makeid() {
+  var text = "";
+  var possible =
+    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+  for (var i = 0; i < 6; i++)
+    text += possible.charAt(Math.floor(Math.random() * possible.length));
+
+  return text;
 }
-console.log(arr);
+
+console.log(makeid());
