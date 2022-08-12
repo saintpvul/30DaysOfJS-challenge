@@ -22,7 +22,8 @@ Use loop to print the following pattern:
 
 // Solution;
 
-console.log(`i i^2 i^3`);
-for (let i = 0; i < 11; i++) {
-  console.log(`${i}  ${i ** 2} ${i ** 3}`);
+for (let i = 0; i < 101; i++) {
+  if (i % 2 === 0) {
+    console.log(i);
+  }
 }
