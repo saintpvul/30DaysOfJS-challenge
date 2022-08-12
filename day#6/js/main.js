@@ -1,8 +1,7 @@
 // DAY 6
 
 /*
-
-Develop a small script which generate array of 5 random numbers
+Develop a small script which generate array of 5 random numbers and the numbers must be unique
 
 */
 
