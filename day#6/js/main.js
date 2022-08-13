@@ -3,24 +3,14 @@
 /*
 
 
-Iterate through the array, ["HTML", "CSS", "JS", "React", "Redux", "Node", "Express", "MongoDB"] using a for loop or for of loop and print out the items.
+This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
 
 
 */
 
 // Solution
 
-const webTechs = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Redux",
-  "Node",
-  "React",
-  "Express",
-  "MongoDB",
-];
-
-for (let i = 0; i < webTechs.length; i++) {
-  console.log(Array(webTechs[i]));
+let fruit = ["banana", "orange", "mango", "lemon"];
+for (let i = fruit.length - 1; i >= 0; i--) {
+  console.log(fruit[i]);
 }
