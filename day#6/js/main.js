@@ -2,15 +2,31 @@
 
 /*
 
-Write a script which generates a random rgb color number.
+Using the above countries array, create the following new array.
 
-rgb(240,180,80)
+["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
 
 */
 
-// Solution;
-let r = Math.floor(Math.random() * 256);
-let g = Math.floor(Math.random() * 256);
-let b = Math.floor(Math.random() * 256);
+// Solution
 
-console.log(`rgb(${r},${g},${b})`);
+let upperArr = [];
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
+];
+
+for (let i = 0; i < countries.length; i++) {
+  upperArr.push(countries[i].toUpperCase());
+}
+console.log(`Countries array: ${countries}`);
+console.log(`Uppercase countries array ${upperArr}`);
