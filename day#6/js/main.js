@@ -3,14 +3,24 @@
 /*
 
 
-This is a fruit array , ['banana', 'orange', 'mango', 'lemon'] reverse the order using loop without using a reverse method.
+Print all the elements of array as shown below.
 
+ HTML
+  CSS
+  JS
+  REACT
+  NODE
+  EXPRESS
+  MONGODB
 
 */
 
 // Solution
 
-let fruit = ["banana", "orange", "mango", "lemon"];
-for (let i = fruit.length - 1; i >= 0; i--) {
-  console.log(fruit[i]);
-}
+const fullStack = [
+  ["HTML", "CSS", "JS", "React"],
+  ["Node", "Express", "MongoDB"],
+];
+
+let items = fullStack.toString().split(",");
+for (var i = 0, j = items.length; i < j; i++) console.log(items[i]);
