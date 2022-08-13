@@ -3,16 +3,15 @@
 /*
 
 
-Using the above countries array, find the country containing the biggest number of characters.
+Using the above countries array, find the country containing only 5 characters.
 
-Ethiopia
+['Japan', 'Kenya']
 
 
 */
 
 // Solution
-let arrOut = [];
-let arrIn = [];
+let newArr = [];
 const countries = [
   "Albania",
   "Bolivia",
@@ -27,14 +26,10 @@ const countries = [
   "Kenya",
 ];
 
-var length = 0;
-var longest;
-
 for (var i = 0; i < countries.length; i++) {
-  if (countries[i].length > length) {
-    var length = countries[i].length;
-    longest = countries[i];
+  if (countries[i].length === 5) {
+    newArr.push(countries[i]);
   }
 }
 
-console.log(longest);
+console.log(newArr);
