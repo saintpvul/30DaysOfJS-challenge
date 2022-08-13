@@ -60,8 +60,11 @@ function find(keyword) {
   {
     if (keyword == "land") {
       console.log([countries.filter((country) => country.endsWith("land"))]);
+    } else if (keyword == "ia") {
+      console.log([countries.filter((country) => country.endsWith("ia"))]);
     }
   }
 }
 
 find("land");
+find("ia");
