@@ -3,7 +3,7 @@
 /*
 
 
-Find the longest word in the webTechs array
+Use the webTechs array to create the following array of arrays:
 
 
 */
@@ -20,14 +20,11 @@ const webTechs = [
   "MongoDB",
 ];
 
-let lenght = 0;
-let longest;
+let arr = [];
+let newArr = [];
 
-for (var i = 0; i < webTechs.length; i++) {
-  if (webTechs[i].length > lenght) {
-    lenght = webTechs[i].length;
-    longest = webTechs[i];
-  }
+for (let i = 0; i < webTechs.length; i++) {
+  newArr.push(webTechs[i], webTechs[i].length);
+  arr.push(newArr.splice(0, 2));
 }
-
-console.log(longest);
+console.log(arr);
