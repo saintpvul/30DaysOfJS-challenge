@@ -17,9 +17,9 @@
 ]
 
 
-In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+In above countries array, check if there is a country or countries end with a substring 'ia'. If there are countries end with, print it as array. If there is no country containing the word 'ai', print 'These are countries ends without ia'.
 
-['Finland','Ireland', 'Iceland']
+['Albania', 'Bolivia','Ethiopia']
 
 
 */
