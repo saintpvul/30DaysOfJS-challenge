@@ -3,33 +3,31 @@
 /*
 
 
-Using the above countries array, find the country containing only 5 characters.
-
-['Japan', 'Kenya']
+Find the longest word in the webTechs array
 
 
 */
 
 // Solution
-let newArr = [];
-const countries = [
-  "Albania",
-  "Bolivia",
-  "Canada",
-  "Denmark",
-  "Ethiopia",
-  "Finland",
-  "Germany",
-  "Hungary",
-  "Ireland",
-  "Japan",
-  "Kenya",
+
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
 ];
 
-for (var i = 0; i < countries.length; i++) {
-  if (countries[i].length === 5) {
-    newArr.push(countries[i]);
+let lenght = 0;
+let longest;
+
+for (var i = 0; i < webTechs.length; i++) {
+  if (webTechs[i].length > lenght) {
+    lenght = webTechs[i].length;
+    longest = webTechs[i];
   }
 }
 
-console.log(newArr);
+console.log(longest);
