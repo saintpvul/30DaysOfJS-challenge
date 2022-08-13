@@ -2,7 +2,11 @@
 
 /*
 
-Develop a small script which generate a six characters random id:
+Develop a small script which generate any number of characters random id:
+
+	fe3jo1gl124g
+
+  xkqci4utda1lmbelpkm03rba
 
 */
 
@@ -10,10 +14,13 @@ Develop a small script which generate a six characters random id:
 
 function makeid() {
   var text = "";
+
   var possible =
     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-  for (var i = 0; i < 6; i++)
+  var getRand = Math.floor(Math.random() * 30);
+
+  for (var i = 0; i < getRand; i++)
     text += possible.charAt(Math.floor(Math.random() * possible.length));
 
   return text;
