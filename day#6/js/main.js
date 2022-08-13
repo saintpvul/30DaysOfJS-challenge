@@ -1,10 +1,7 @@
 // DAY 6
 
 /*
-
-Use the countries array to create the following array of arrays:
-
-  [
+[
   ['Albania', 'ALB', 7],
   ['Bolivia', 'BOL', 7],
   ['Canada', 'CAN', 6],
@@ -18,6 +15,12 @@ Use the countries array to create the following array of arrays:
   ['Japan', 'JAP', 5],
   ['Kenya', 'KEN', 5]
 ]
+
+
+In above countries array, check if there is a country or countries containing the word 'land'. If there are countries containing 'land', print it as array. If there is no country containing the word 'land', print 'All these countries are without land'.
+
+['Finland','Ireland', 'Iceland']
+
 
 */
 
@@ -38,6 +41,7 @@ const countries = [
   "Kenya",
 ];
 
+let newArr = [];
 for (let i = 0; i < countries.length; i++) {
   let toUp = countries[i].toUpperCase();
 
@@ -49,4 +53,15 @@ for (let i = 0; i < countries.length; i++) {
     arrOut.push(arrIn.splice(0, 3));
   }
 }
+
 console.log(arrOut);
+
+function find(keyword) {
+  {
+    if (keyword == "land") {
+      console.log([countries.filter((country) => country.endsWith("land"))]);
+    }
+  }
+}
+
+find("land");
