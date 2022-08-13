@@ -2,28 +2,21 @@
 
 /*
 
-Develop a small script which generate any number of characters random id:
+Write a script which generates a random hexadecimal number.
 
-	fe3jo1gl124g
-
-  xkqci4utda1lmbelpkm03rba
+'#ee33df'
 
 */
 
 // Solution;
 
-function makeid() {
-  var text = "";
+function makehex() {
+  var letter = "0123456789ABCDEF";
+  var hex = "#";
 
-  var possible =
-    "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
-
-  var getRand = Math.floor(Math.random() * 30);
-
-  for (var i = 0; i < getRand; i++)
-    text += possible.charAt(Math.floor(Math.random() * possible.length));
-
-  return text;
+  for (let i = 0; i < 6; i++) {
+    hex += letter[Math.floor(Math.random() * 16)];
+  }
+  return hex;
 }
-
-console.log(makeid());
+console.log(makehex());
