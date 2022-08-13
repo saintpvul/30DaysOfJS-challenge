@@ -2,15 +2,28 @@
 
 /*
 
-Using the above countries array, create an array for countries length'.
+Use the countries array to create the following array of arrays:
 
-[7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
+  [
+  ['Albania', 'ALB', 7],
+  ['Bolivia', 'BOL', 7],
+  ['Canada', 'CAN', 6],
+  ['Denmark', 'DEN', 7],
+  ['Ethiopia', 'ETH', 8],
+  ['Finland', 'FIN', 7],
+  ['Germany', 'GER', 7],
+  ['Hungary', 'HUN', 7],
+  ['Ireland', 'IRE', 7],
+  ['Iceland', 'ICE', 7],
+  ['Japan', 'JAP', 5],
+  ['Kenya', 'KEN', 5]
+]
 
 */
 
 // Solution
-
-let arrLength = [];
+let arrOut = [];
+let arrIn = [];
 const countries = [
   "Albania",
   "Bolivia",
@@ -26,7 +39,14 @@ const countries = [
 ];
 
 for (let i = 0; i < countries.length; i++) {
-  arrLength.push(countries[i].length);
+  let toUp = countries[i].toUpperCase();
+
+  arrIn.push(countries[i]),
+    arrIn.push(toUp.slice(0, 3)),
+    arrIn.push(countries[i].length);
+
+  for (let j = 0; j < arrIn.length; j++) {
+    arrOut.push(arrIn.splice(0, 3));
+  }
 }
-console.log(`Countries array: ${countries}`);
-console.log(`Countries length ${arrLength}`);
+console.log(arrOut);
