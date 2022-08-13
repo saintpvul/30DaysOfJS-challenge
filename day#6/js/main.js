@@ -2,21 +2,15 @@
 
 /*
 
-Write a script which generates a random hexadecimal number.
+Write a script which generates a random rgb color number.
 
-'#ee33df'
+rgb(240,180,80)
 
 */
 
 // Solution;
+let r = Math.floor(Math.random() * 256);
+let g = Math.floor(Math.random() * 256);
+let b = Math.floor(Math.random() * 256);
 
-function makehex() {
-  var letter = "0123456789ABCDEF";
-  var hex = "#";
-
-  for (let i = 0; i < 6; i++) {
-    hex += letter[Math.floor(Math.random() * 16)];
-  }
-  return hex;
-}
-console.log(makehex());
+console.log(`rgb(${r},${g},${b})`);
