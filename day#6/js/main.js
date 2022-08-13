@@ -2,15 +2,15 @@
 
 /*
 
-Using the above countries array, create the following new array.
+Using the above countries array, create an array for countries length'.
 
-["ALBANIA", "BOLIVIA", "CANADA", "DENMARK", "ETHIOPIA", "FINLAND", "GERMANY", "HUNGARY", "IRELAND", "JAPAN", "KENYA"]
+[7, 7, 6, 7, 8, 7, 7, 7, 7, 5, 5]
 
 */
 
 // Solution
 
-let upperArr = [];
+let arrLength = [];
 const countries = [
   "Albania",
   "Bolivia",
@@ -26,7 +26,7 @@ const countries = [
 ];
 
 for (let i = 0; i < countries.length; i++) {
-  upperArr.push(countries[i].toUpperCase());
+  arrLength.push(countries[i].length);
 }
 console.log(`Countries array: ${countries}`);
-console.log(`Uppercase countries array ${upperArr}`);
+console.log(`Countries length ${arrLength}`);
