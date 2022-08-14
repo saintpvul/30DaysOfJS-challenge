@@ -2,7 +2,7 @@
 
 /*
 
-Extract all the countries contain the word 'land' from the countries array and print it as array
+Extract all the countries containing only four characters from the countries array and print it as array
 
 */
 
@@ -22,4 +22,11 @@ const countries = [
   "Kenya",
 ];
 
-console.log([countries.filter((country) => country.endsWith("land"))]);
+let newArr = [];
+
+for (let i = 0; i < countries.length; i++) {
+  if (countries[i].length <= 4) {
+    newArr.push(countries[i]);
+  } else console.log("There is no countries with only four characters");
+}
+console.log(newArr);
