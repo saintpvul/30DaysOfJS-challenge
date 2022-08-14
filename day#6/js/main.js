@@ -204,11 +204,4 @@ const countries = [
   "Zimbabwe",
 ];
 
-let newArr = [];
-
-for (let i = 0; i < countries.length; i++) {
-  if (countries[i].length <= 4) {
-    newArr.push(countries[i]);
-  } else console.log("There is no countries with only four characters");
-}
-console.log(newArr);
+console.log([countries.filter((country) => country.endsWith("land"))]);
