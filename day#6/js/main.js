@@ -2,26 +2,29 @@
 
 /*
 
-
-Copy countries array(Avoid mutation)
+Sort the webTechs array and mernStack array
 
 */
 
 // Solution
 
-const countries = [
-  "Albania",
-  "Bolivia",
-  "Canada",
-  "Denmark",
-  "Ethiopia",
-  "Finland",
-  "Germany",
-  "Hungary",
-  "Ireland",
-  "Japan",
-  "Kenya",
+const webTechs = [
+  "HTML",
+  "CSS",
+  "JavaScript",
+  "React",
+  "Redux",
+  "Node",
+  "MongoDB",
 ];
 
-const sortedCountries = [...countries].sort();
-console.log(sortedCountries);
+const mernStack = ["MongoDB", "Express", "React", "Node"];
+
+const sortedTechs = [...webTechs].sort();
+console.log(`For sorted Techs ${sortedTechs}`);
+
+const sortedMern = [...mernStack].sort();
+console.log(`For sorted MERN ${sortedMern}`);
+
+const sortAllTechs = sortedTechs.concat(sortedMern).sort();
+console.log(`For all sorted techs ${sortAllTechs}`);
