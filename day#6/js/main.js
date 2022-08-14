@@ -2,7 +2,7 @@
 
 /*
 
-Extract all the countries contain the word 'land' from the countries array and print it as array
+Extract all the countries containing two or more words from the countries array and print it as array
 
 */
 
@@ -204,14 +204,12 @@ const countries = [
   "Zimbabwe",
 ];
 
-var count = 0;
-let highest;
+let pushArr = [];
+
 for (let i = 0; i < countries.length; i++) {
-  if (countries[i].length > count) {
-    count = countries[i].length;
-    if (count) highest = countries[i];
+  if (countries[i].includes(" ")) {
+    pushArr.push(countries[i]);
   }
-  console.log(
-    `The highest number of characters has the ${highest} country. ${count} characters.`
-  );
 }
+
+console.log(pushArr);
