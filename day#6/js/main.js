@@ -22,11 +22,4 @@ const countries = [
   "Kenya",
 ];
 
-var count = 0;
-for (let i = 0; i < countries.length; i++) {
-  if (countries[i].length > count) {
-    var count = countries[i].length;
-    highest = countries[i];
-  }
-}
-console.log(`The ${highest} country includes ${count} characters`);
+console.log([countries.filter((country) => country.endsWith("land"))]);
