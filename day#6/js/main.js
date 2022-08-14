@@ -2,29 +2,30 @@
 
 /*
 
-Sort the webTechs array and mernStack array
+Extract all the countries contain the word 'land' from the countries array and print it as array
 
 */
 
 // Solution
 
-const webTechs = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "React",
-  "Redux",
-  "Node",
-  "MongoDB",
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
 ];
 
-const mernStack = ["MongoDB", "Express", "React", "Node"];
-
-const sortedTechs = [...webTechs].sort();
-console.log(`For sorted Techs ${sortedTechs}`);
-
-const sortedMern = [...mernStack].sort();
-console.log(`For sorted MERN ${sortedMern}`);
-
-const sortAllTechs = sortedTechs.concat(sortedMern).sort();
-console.log(`For all sorted techs ${sortAllTechs}`);
+function find(keyword) {
+  if (keyword == "land") {
+    console.log([countries.filter((country) => country.endsWith("land"))]);
+  }
+}
+let newArr = [];
+let findItem = newArr.push(find("land"));
