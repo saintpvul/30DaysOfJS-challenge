@@ -3,25 +3,26 @@
 /*
 
 
-Print all the elements of array as shown below.
-
- HTML
-  CSS
-  JS
-  REACT
-  NODE
-  EXPRESS
-  MONGODB
+Copy countries array(Avoid mutation)
 
 */
 
 // Solution
 
-const fullStack = [
-  ["HTML", "CSS", "JS", "React"],
-  ["Node", "Express", "MongoDB"],
+const countries = [
+  "Albania",
+  "Bolivia",
+  "Canada",
+  "Denmark",
+  "Ethiopia",
+  "Finland",
+  "Germany",
+  "Hungary",
+  "Ireland",
+  "Japan",
+  "Kenya",
 ];
 
-let items = fullStack.toString().split(",");
-
-for (let i = 0; i < items.length; i++) console.log(items[i]);
+const newCount = [...countries];
+console.log(countries);
+console.log(newCount);
