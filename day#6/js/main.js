@@ -22,10 +22,11 @@ const countries = [
   "Kenya",
 ];
 
-function find(keyword) {
-  if (keyword == "land") {
-    console.log([countries.filter((country) => country.endsWith("land"))]);
+var count = 0;
+for (let i = 0; i < countries.length; i++) {
+  if (countries[i].length > count) {
+    var count = countries[i].length;
+    highest = countries[i];
   }
 }
-let newArr = [];
-let findItem = newArr.push(find("land"));
+console.log(`The ${highest} country includes ${count} characters`);
