@@ -204,12 +204,15 @@ const countries = [
   "Zimbabwe",
 ];
 
-let pushArr = [];
+let upperArr = [];
 
 for (let i = 0; i < countries.length; i++) {
-  if (countries[i].includes(" ")) {
-    pushArr.push(countries[i]);
-  }
+  upperArr.push(countries[i].toUpperCase());
 }
+console.log(upperArr);
 
-console.log(pushArr);
+let reverseArr = [];
+for (let j = upperArr.length; j > 0; j--) {
+  reverseArr.push(upperArr[j]);
+}
+console.log(reverseArr);
