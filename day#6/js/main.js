@@ -23,6 +23,5 @@ const countries = [
   "Kenya",
 ];
 
-const newCount = [...countries];
-console.log(countries);
-console.log(newCount);
+const sortedCountries = [...countries].sort();
+console.log(sortedCountries);
