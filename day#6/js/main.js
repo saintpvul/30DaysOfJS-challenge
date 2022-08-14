@@ -23,4 +23,5 @@ const fullStack = [
 ];
 
 let items = fullStack.toString().split(",");
-for (var i = 0, j = items.length; i < j; i++) console.log(items[i]);
+
+for (let i = 0; i < items.length; i++) console.log(items[i]);
