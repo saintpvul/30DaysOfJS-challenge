@@ -2,13 +2,17 @@
 
 /*
 
-Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.
+Declare a function addNumbers and it takes two two parameters and it returns sum.
 
 */
 
 //Solution
 
-function fullName(firstName, lastName) {
-  console.log(firstName + " " + lastName);
+function addNumbers(num1, num2) {
+  let sum = num1 + num2;
+  return sum;
 }
-fullName("Shvets", "Paul");
+
+console.log(addNumbers(214, 186));
+console.log(addNumbers(1, 6));
+console.log(addNumbers(53, 17));
