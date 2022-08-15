@@ -2,14 +2,18 @@
 
 /*
 
-An area of a rectangle is calculated as follows: area = length x width. Write a function which calculates areaOfRectangle.
+A perimeter of a rectangle is calculated as follows: perimeter= 2x(length + width). Write a function which calculates perimeterOfRectangle.
 
 */
 
 //Solution
 
-function areaOfRectangle(length, width) {
-  let area = length * width;
-  return `The area of rectangle is ${area}`;
+function perimeterOfRectangle(length, width) {
+  let perimeter = 2 * (length + width);
+  return `Perimeter of rectangle is ${perimeter}`;
 }
-console.log(areaOfRectangle(20, 10));
+console.log(perimeterOfRectangle(20, 10));
+
+console.log(perimeterOfRectangle(5, 10));
+
+console.log(perimeterOfRectangle(20, 45));
