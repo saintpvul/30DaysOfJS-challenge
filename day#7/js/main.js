@@ -2,17 +2,14 @@
 
 /*
 
-Declare a function addNumbers and it takes two two parameters and it returns sum.
+An area of a rectangle is calculated as follows: area = length x width. Write a function which calculates areaOfRectangle.
 
 */
 
 //Solution
 
-function addNumbers(num1, num2) {
-  let sum = num1 + num2;
-  return sum;
+function areaOfRectangle(length, width) {
+  let area = length * width;
+  return `The area of rectangle is ${area}`;
 }
-
-console.log(addNumbers(214, 186));
-console.log(addNumbers(1, 6));
-console.log(addNumbers(53, 17));
+console.log(areaOfRectangle(20, 10));
