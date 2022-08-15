@@ -2,16 +2,16 @@
 
 /*
 
-Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
+Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle
 
 */
 
 //Solution
 
-function areaOfCircle(r) {
-  let area = Math.floor(Math.PI * r * r);
-  return `Area of circle equal to ${area}`;
+function circumOfCircle(r) {
+  let circumference = Math.floor(2 * (Math.PI * r));
+  return `Circumference of circle equal to ${circumference}`;
 }
-console.log(areaOfCircle(15));
-console.log(areaOfCircle(5));
-console.log(areaOfCircle(10));
+console.log(circumOfCircle(5));
+console.log(circumOfCircle(81));
+console.log(circumOfCircle(10));
