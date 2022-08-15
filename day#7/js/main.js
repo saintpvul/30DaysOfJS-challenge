@@ -2,18 +2,16 @@
 
 /*
 
-A perimeter of a rectangle is calculated as follows: perimeter= 2x(length + width). Write a function which calculates perimeterOfRectangle.
+A volume of a rectangular prism is calculated as follows: volume = length x width x height. Write a function which calculates volumeOfRectPrism.
 
 */
 
 //Solution
 
-function perimeterOfRectangle(length, width) {
-  let perimeter = 2 * (length + width);
-  return `Perimeter of rectangle is ${perimeter}`;
+function volumeOfRectPrism(length, width, height) {
+  let volume = length * width * height;
+  return `A Volue of rectengular prism is ${volume}`;
 }
-console.log(perimeterOfRectangle(20, 10));
-
-console.log(perimeterOfRectangle(5, 10));
-
-console.log(perimeterOfRectangle(20, 45));
+console.log(volumeOfRectPrism(21, 23, 41));
+console.log(volumeOfRectPrism(5, 3, 4));
+console.log(volumeOfRectPrism(10, 20, 10));
