@@ -2,16 +2,16 @@
 
 /*
 
-A volume of a rectangular prism is calculated as follows: volume = length x width x height. Write a function which calculates volumeOfRectPrism.
+Area of a circle is calculated as follows: area = π x r x r. Write a function which calculates areaOfCircle
 
 */
 
 //Solution
 
-function volumeOfRectPrism(length, width, height) {
-  let volume = length * width * height;
-  return `A Volue of rectengular prism is ${volume}`;
+function areaOfCircle(r) {
+  let area = Math.floor(Math.PI * r * r);
+  return `Area of circle equal to ${area}`;
 }
-console.log(volumeOfRectPrism(21, 23, 41));
-console.log(volumeOfRectPrism(5, 3, 4));
-console.log(volumeOfRectPrism(10, 20, 10));
+console.log(areaOfCircle(15));
+console.log(areaOfCircle(5));
+console.log(areaOfCircle(10));
