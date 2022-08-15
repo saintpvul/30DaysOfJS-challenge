@@ -2,14 +2,18 @@
 
 /*
 
-Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
+Temperature in oC can be converted to oF using this formula: oF = (oC x 9/5) + 32. Write a function which convert oC to oF convertCelsiusToFahrenheit.
 
 */
 
 //Solution
 
-function weight(mass, gravity) {
-  let weight = mass * gravity;
-  return `Weight is ${weight} N`;
+function convertCelsiusToFahrenheit(oC) {
+  let oF = (oC * 9) / 5 + 32;
+  return `o Celcium ${oC} in o Fahrenheit is ${oF}`;
 }
-console.log(weight(27, 15));
+console.log(convertCelsiusToFahrenheit(37));
+
+console.log(convertCelsiusToFahrenheit(0));
+
+console.log(convertCelsiusToFahrenheit(18));
