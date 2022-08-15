@@ -2,14 +2,14 @@
 
 /*
 
-Speed is calculated by dividing the total distance covered by a moving object divided by the total amount of time taken. Write a function which calculates a speed of a moving object, speed.
+Weight of a substance is calculated as follows: weight = mass x gravity. Write a function which calculates weight.
 
 */
 
 //Solution
 
-function speed(d, t) {
-  let speed = d / t;
-  return speed;
+function weight(mass, gravity) {
+  let weight = mass * gravity;
+  return `Weight is ${weight} N`;
 }
-console.log(speed(100, 12));
+console.log(weight(27, 15));
