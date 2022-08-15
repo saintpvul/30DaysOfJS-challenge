@@ -2,16 +2,14 @@
 
 /*
 
-Circumference of a circle is calculated as follows: circumference = 2πr. Write a function which calculates circumOfCircle
+Density of a substance is calculated as follows:density= mass/volume. Write a function which calculates density.
 
 */
 
 //Solution
 
-function circumOfCircle(r) {
-  let circumference = Math.floor(2 * (Math.PI * r));
-  return `Circumference of circle equal to ${circumference}`;
+function density(mass, volume) {
+  let dens = mass / volume;
+  return `Density of substance is ${dens}`;
 }
-console.log(circumOfCircle(5));
-console.log(circumOfCircle(81));
-console.log(circumOfCircle(10));
+console.log(density(15, 23));
