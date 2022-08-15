@@ -2,13 +2,13 @@
 
 /*
 
-Declare a function fullName and it print out your full name.
+Declare a function fullName and now it takes firstName, lastName as a parameter and it returns your full - name.
 
 */
 
 //Solution
 
-function fullName() {
-  console.log("Shvets Paul");
+function fullName(firstName, lastName) {
+  console.log(firstName + " " + lastName);
 }
-fullName();
+fullName("Shvets", "Paul");
