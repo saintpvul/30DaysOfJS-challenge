@@ -2,16 +2,27 @@
 
 /*
 
-Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
 
 */
 
 //Solution
-
-function addItem(...i) {
-  let arr = [];
-  arr.push(...i);
+let arr = [
+  "Afghanistan",
+  "Albania",
+  "Algeria",
+  "Andorra",
+  "Angola",
+  "Anguilla",
+  "Vietnam",
+  "Virgin Islands (US)",
+  "Yemen",
+  "Zambia",
+  "Zimbabwe",
+];
+function removeItem(ndx) {
+  arr.splice(ndx, 1);
   console.log(arr);
 }
 
-addItem("apple", "orange", "pineapple");
+removeItem(0);
