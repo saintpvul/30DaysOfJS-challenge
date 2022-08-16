@@ -2,21 +2,16 @@
 
 /*
 
-Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
+Declare a function name addItem. It takes an item parameter and it returns an array after adding the item
+
 */
 
 //Solution
 
-function capitalizedArray(arr) {
-  let newArr = [];
-
-  for (let i = 0; i < arr.length; i++) {
-    newArr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
-  }
-
-  console.log(newArr);
+function addItem(...i) {
+  let arr = [];
+  arr.push(...i);
+  console.log(arr);
 }
 
-capitalizedArray(["apple", "orange", "lemon"]);
-
-capitalizedArray(["oregon", "washington", "california"]);
+addItem("apple", "orange", "pineapple");
