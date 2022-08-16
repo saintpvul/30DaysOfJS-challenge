@@ -2,27 +2,22 @@
 
 /*
 
-Declare a function name removeItem. It takes an index parameter and it returns an array after removing an item
+Declare a function name sumOfNumbers. It takes a number parameter and it adds all the numbers in that range.
 
 */
 
 //Solution
-let arr = [
-  "Afghanistan",
-  "Albania",
-  "Algeria",
-  "Andorra",
-  "Angola",
-  "Anguilla",
-  "Vietnam",
-  "Virgin Islands (US)",
-  "Yemen",
-  "Zambia",
-  "Zimbabwe",
-];
-function removeItem(ndx) {
-  arr.splice(ndx, 1);
-  console.log(arr);
+
+function sumOfNumbers(num) {
+  let sum = 0;
+  for (let i = 1; i <= num; i++) {
+    sum += i;
+  }
+  console.log(sum);
 }
 
-removeItem(0);
+sumOfNumbers(16);
+
+sumOfNumbers(3);
+
+sumOfNumbers(100);
