@@ -2,19 +2,23 @@
 
 /*
 
-Write a function name showDateTime which shows time in this format: 08/01/2020 04:08 using the Date object.
+Declare a function name swapValues. This function swaps value of x to y.
 
 */
 
 //Solution
 
-function showDateTime() {
-  let date = new Date();
-  let getDay = ("0" + date.getDay()).slice(-2);
-  let getMonth = ("0" + date.getMonth()).slice(-3);
-  let getYear = date.getFullYear();
-  let getHour = ("0" + date.getHours()).slice(-2);
-  let getMin = ("0" + date.getMinutes()).slice(-2);
-  console.log(`${getDay}/${getMonth}/${getYear} ${getHour}:${getMin}`);
+function swapValues(x, y) {
+  [x, y] = [y, x];
+  console.log(x, y);
 }
-showDateTime();
+function swapValue(x, y) {
+  let temp = x;
+  x = y;
+  y = temp;
+  console.log(x, y);
+}
+
+swapValues(3, 5);
+
+swapValue(5, 7);
