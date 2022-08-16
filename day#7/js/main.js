@@ -2,24 +2,29 @@
 
 /*
 
-Declare a function name sumOfEven. It takes a number parameter and it adds all the even numbers in that - range.
+Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
 
 */
 
 //Solution
 
-function sumOfEven(num) {
-  let sum = 0;
-  for (let i = 0; i <= num; i++) {
-    if (i % 2 == 0) {
-      sum += i;
+function evensAndOdds(num) {
+  let odd = 0;
+  let even = 0;
+  for (let i = num; i >= 0; i--) {
+    if (i % 2 === 0) {
+      odd++;
+    } else {
+      even++;
     }
   }
-  console.log(sum);
+  console.log(
+    `The number of odds are ${odd}.\nThe number of evens are ${even}`
+  );
 }
 
-sumOfEven(16);
+evensAndOdds(100);
 
-sumOfEven(3);
+evensAndOdds(300);
 
-sumOfEven(100);
+evensAndOdds(256);
