@@ -2,17 +2,21 @@
 
 /*
 
-Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
-
+Declare a function name capitalizeArray. It takes array as a parameter and it returns the - capitalizedarray.
 */
 
 //Solution
 
-function reverseArray(arr) {
-  for (let i = arr.length - 1; i >= 0; i--) {
-    console.log(arr[i]);
+function capitalizedArray(arr) {
+  let newArr = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    newArr.push(arr[i].charAt(0).toUpperCase() + arr[i].slice(1));
   }
+
+  console.log(newArr);
 }
 
-reverseArray([1, 2, 3]);
-reverseArray(["Paul", "Raul", "Esaul"]);
+capitalizedArray(["apple", "orange", "lemon"]);
+
+capitalizedArray(["oregon", "washington", "california"]);
