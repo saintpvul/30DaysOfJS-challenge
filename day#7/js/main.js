@@ -2,29 +2,16 @@
 
 /*
 
-Declare a function name evensAndOdds . It takes a positive integer as parameter and it counts number of evens and odds in the number.
+Write a function which takes any number of arguments and return the sum of the arguments
 
 */
 
 //Solution
 
-function evensAndOdds(num) {
-  let odd = 0;
-  let even = 0;
-  for (let i = num; i >= 0; i--) {
-    if (i % 2 === 0) {
-      odd++;
-    } else {
-      even++;
-    }
-  }
-  console.log(
-    `The number of odds are ${odd}.\nThe number of evens are ${even}`
-  );
-}
+const sum = (...args) => [...args].reduce((a, b) => a + b, 0);
 
-evensAndOdds(100);
+console.log(sum(1, 2, 3));
 
-evensAndOdds(300);
+console.log(sum(10, 20, 30));
 
-evensAndOdds(256);
+console.log(sum(22, 11, 33));
