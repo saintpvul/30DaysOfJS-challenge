@@ -2,23 +2,17 @@
 
 /*
 
-Declare a function name swapValues. This function swaps value of x to y.
+Declare a function name reverseArray. It takes array as a parameter and it returns the reverse of the array (don't use method).
 
 */
 
 //Solution
 
-function swapValues(x, y) {
-  [x, y] = [y, x];
-  console.log(x, y);
-}
-function swapValue(x, y) {
-  let temp = x;
-  x = y;
-  y = temp;
-  console.log(x, y);
+function reverseArray(arr) {
+  for (let i = arr.length - 1; i >= 0; i--) {
+    console.log(arr[i]);
+  }
 }
 
-swapValues(3, 5);
-
-swapValue(5, 7);
+reverseArray([1, 2, 3]);
+reverseArray(["Paul", "Raul", "Esaul"]);
