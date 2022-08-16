@@ -8,16 +8,18 @@ Declare a function name sumOfNumbers. It takes a number parameter and it adds al
 
 //Solution
 
-function sumOfNumbers(num) {
+function sumOfOdds(num) {
   let sum = 0;
-  for (let i = 1; i <= num; i++) {
-    sum += i;
+  for (let i = 0; i <= num; i++) {
+    if (i % 2 !== 0) {
+      sum += i;
+    }
   }
   console.log(sum);
 }
 
-sumOfNumbers(16);
+sumOfOdds(16);
 
-sumOfNumbers(3);
+sumOfOdds(3);
 
-sumOfNumbers(100);
+sumOfOdds(100);
