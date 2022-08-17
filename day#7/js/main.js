@@ -2,16 +2,22 @@
 
 /*
 
-Writ a function which generates a randomUserIp.
+Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+
+console.log(randomHexaNumberGenerator());
+'#ee33df'
 
 */
 
 //Solution
 
-function mac() {
-  let mac = "XX:XX:XX:XX:XX:XX".replace(/X/g, function () {
-    return "0123456789ABCDEF".charAt(Math.floor(Math.random() * 16));
-  });
-  return mac;
+function randomHexaNumberGenerator() {
+  console.log(
+    "#" +
+      ((Math.random() * 0xffffff) << 0)
+        .toString(16)
+        .padStart(6, "0")
+        .toUpperCase()
+  );
 }
-console.log(mac());
+randomHexaNumberGenerator();
