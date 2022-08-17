@@ -2,16 +2,23 @@
 
 /*
 
-Write a function which takes any number of arguments and return the sum of the arguments
+Writ a function which generates a randomUserIp.
 
 */
 
 //Solution
 
-const sum = (...args) => [...args].reduce((a, b) => a + b, 0);
+function randomUserIp() {
+  let ip =
+    Math.floor(Math.random() * 255) +
+    1 +
+    "." +
+    Math.floor(Math.random() * 255) +
+    "." +
+    Math.floor(Math.random() * 255) +
+    "." +
+    Math.floor(Math.random() * 255);
+  return ip;
+}
 
-console.log(sum(1, 2, 3));
-
-console.log(sum(10, 20, 30));
-
-console.log(sum(22, 11, 33));
+console.log(randomUserIp());
