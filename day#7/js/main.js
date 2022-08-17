@@ -2,22 +2,23 @@
 
 /*
 
-Declare a function name randomHexaNumberGenerator. When this function is called it generates a random hexadecimal number. The function return the hexadecimal number.
+Declare a function name userIdGenerator. When this function is called it generates seven character id. The function return the id.
 
-console.log(randomHexaNumberGenerator());
-'#ee33df'
+console.log(userIdGenerator());
+41XTDbE
 
 */
 
 //Solution
 
-function randomHexaNumberGenerator() {
-  console.log(
-    "#" +
-      ((Math.random() * 0xffffff) << 0)
-        .toString(16)
-        .padStart(6, "0")
-        .toUpperCase()
-  );
+function userIdGenerator() {
+  let text = "";
+  let char = "01234567890abcdefghijklmopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+
+  for (let i = 0; i < 7; i++)
+    text += char.charAt(Math.floor(Math.random() * char.length));
+
+  return text;
 }
-randomHexaNumberGenerator();
+
+console.log(userIdGenerator());
