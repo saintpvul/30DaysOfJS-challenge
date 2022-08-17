@@ -8,17 +8,10 @@ Writ a function which generates a randomUserIp.
 
 //Solution
 
-function randomUserIp() {
-  let ip =
-    Math.floor(Math.random() * 255) +
-    1 +
-    "." +
-    Math.floor(Math.random() * 255) +
-    "." +
-    Math.floor(Math.random() * 255) +
-    "." +
-    Math.floor(Math.random() * 255);
-  return ip;
+function mac() {
+  let mac = "XX:XX:XX:XX:XX:XX".replace(/X/g, function () {
+    return "0123456789ABCDEF".charAt(Math.floor(Math.random() * 16));
+  });
+  return mac;
 }
-
-console.log(randomUserIp());
+console.log(mac());
