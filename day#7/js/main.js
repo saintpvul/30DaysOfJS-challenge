@@ -2,7 +2,7 @@
 
 /*
 
-Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
+Write a function generateColors which can generate any number of hexa or rgb colors.
 
 */
 
