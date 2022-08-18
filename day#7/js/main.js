@@ -2,20 +2,24 @@
 
 /*
 
-Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
+Call your function isEmpty, it takes a parameter and it checks if it is empty or not
 
 */
 
 //Solution
 
-function factorial(num) {
-  if (num < 0) return -1;
-  else if (num == 0) return 1;
-  else return num * factorial(num - 1);
+function isEmpty(param) {
+  if (typeof param !== "undefined" && param) {
+    console.log(`Param is not empty`);
+  } else {
+    console.log(`Param is empty`);
+  }
 }
 
-console.log(factorial(1));
+isEmpty("");
 
-console.log(factorial(4));
+isEmpty(null);
 
-console.log(factorial(15));
+isEmpty("1");
+
+isEmpty(true);
