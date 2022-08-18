@@ -2,29 +2,20 @@
 
 /*
 
-Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
+Call your function factorial, it takes a whole number as a parameter and it return a factorial of the number
 
 */
 
 //Solution
 
-function shuffleArray(arr) {
-  let index = arr.length,
-    randomIndex;
-
-  while (index != 0) {
-    randomIndex = Math.floor(Math.random() * index);
-    index--;
-
-    [arr[index], arr[randomIndex]] = [arr[randomIndex], arr[index]];
-  }
-  return arr;
+function factorial(num) {
+  if (num < 0) return -1;
+  else if (num == 0) return 1;
+  else return num * factorial(num - 1);
 }
 
-let array = [1, 2, 3, 4, 5, 6];
+console.log(factorial(1));
 
-let array1 = ["Paul", "Otto", "Rodrigo", "Enrique"];
+console.log(factorial(4));
 
-console.log(shuffleArray(array));
-
-console.log(shuffleArray(array1));
+console.log(factorial(15));
