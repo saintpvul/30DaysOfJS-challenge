@@ -2,24 +2,26 @@
 
 /*
 
-Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
+Write a function convertRgbToHexa which converts rgb to hexa color and it returns an hexa color.
 
 */
 
 //Solution
 
-function convertHexaToRgb() {
-  let hex =
-    "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0");
-  let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
-  return result
-    ? {
-        hex,
-        r: parseInt(result[1], 16),
-        g: parseInt(result[2], 16),
-        b: parseInt(result[3], 16),
-      }
-    : null;
+function convertRgbToHexa(r, g, b) {
+  // random rgb
+  // let r = Math.floor(Math.random() * 255);
+  // let g = Math.floor(Math.random() * 255);
+  // let b = Math.floor(Math.random() * 255);
+
+  // component
+  function component(c) {
+    let hex = c.toString(16);
+    return hex.length == 1 ? "0" + hex : hex;
+  }
+  return "#" + component(r) + component(g) + component(b);
 }
 
-console.log(convertHexaToRgb());
+console.log(convertRgbToHexa(134, 31, 121));
+console.log(convertRgbToHexa(34, 31, 11));
+console.log(convertRgbToHexa(134, 200, 221));
