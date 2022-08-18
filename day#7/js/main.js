@@ -2,24 +2,18 @@
 
 /*
 
-Call your function isEmpty, it takes a parameter and it checks if it is empty or not
+Call your function sum, it takes any number of arguments and it returns the sum.
 
 */
 
 //Solution
 
-function isEmpty(param) {
-  if (typeof param !== "undefined" && param) {
-    console.log(`Param is not empty`);
-  } else {
-    console.log(`Param is empty`);
-  }
+function sum(...arg) {
+  let s = arg.reduce((a, b) => a + b, 0);
+
+  return s;
 }
 
-isEmpty("");
+console.log(sum(1, 2, 3, 4, 5));
 
-isEmpty(null);
-
-isEmpty("1");
-
-isEmpty(true);
+console.log(sum(22, 11, 7));
