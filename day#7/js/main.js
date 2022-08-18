@@ -8,20 +8,29 @@ Write a function generateColors which can generate any number of hexa or rgb col
 
 //Solution
 
-function convertRgbToHexa(r, g, b) {
-  // random rgb
-  // let r = Math.floor(Math.random() * 255);
-  // let g = Math.floor(Math.random() * 255);
-  // let b = Math.floor(Math.random() * 255);
+function generateColors(val, a) {
+  let res = [];
 
-  // component
-  function component(c) {
-    let hex = c.toString(16);
-    return hex.length == 1 ? "0" + hex : hex;
+  if (val == "hexa") {
+    for (let i = 0; i < a; i++) {
+      let hex =
+        "#" + ((Math.random() * 0xffffff) << 0).toString(16).padEnd(6, "0");
+      res.push(hex);
+      console.log(res[i]);
+    }
+  } else if (val == "rgb") {
+    for (let j = 0; j < a; j++) {
+      let r = Math.floor(Math.random() * 255);
+      let g = Math.floor(Math.random() * 255);
+      let b = Math.floor(Math.random() * 255);
+
+      let rgb = `rgb (${r}, ${g}, ${b})`;
+      res.push(rgb);
+      console.log(res[j]);
+    }
   }
-  return "#" + component(r) + component(g) + component(b);
 }
 
-console.log(convertRgbToHexa(134, 31, 121));
-console.log(convertRgbToHexa(34, 31, 11));
-console.log(convertRgbToHexa(134, 200, 221));
+generateColors("hexa", 4);
+
+generateColors("rgb", 2);
