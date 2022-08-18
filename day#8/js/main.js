@@ -2,10 +2,11 @@
 
 /*
 
-Create an empty object called dog
+Print the the dog object on the console
 
 
 */
 
 // Solution
 const dog = {};
+console.log(dog);
