@@ -2,35 +2,29 @@
 
 /*
 
-Write a function generateColors which can generate any number of hexa or rgb colors.
+Call your function shuffleArray, it takes an array as a parameter and it returns a shuffled array
 
 */
 
 //Solution
 
-function generateColors(val, a) {
-  let res = [];
+function shuffleArray(arr) {
+  let index = arr.length,
+    randomIndex;
 
-  if (val == "hexa") {
-    for (let i = 0; i < a; i++) {
-      let hex =
-        "#" + ((Math.random() * 0xffffff) << 0).toString(16).padEnd(6, "0");
-      res.push(hex);
-      console.log(res[i]);
-    }
-  } else if (val == "rgb") {
-    for (let j = 0; j < a; j++) {
-      let r = Math.floor(Math.random() * 255);
-      let g = Math.floor(Math.random() * 255);
-      let b = Math.floor(Math.random() * 255);
+  while (index != 0) {
+    randomIndex = Math.floor(Math.random() * index);
+    index--;
 
-      let rgb = `rgb (${r}, ${g}, ${b})`;
-      res.push(rgb);
-      console.log(res[j]);
-    }
+    [arr[index], arr[randomIndex]] = [arr[randomIndex], arr[index]];
   }
+  return arr;
 }
 
-generateColors("hexa", 4);
+let array = [1, 2, 3, 4, 5, 6];
 
-generateColors("rgb", 2);
+let array1 = ["Paul", "Otto", "Rodrigo", "Enrique"];
+
+console.log(shuffleArray(array));
+
+console.log(shuffleArray(array1));
