@@ -2,19 +2,24 @@
 
 /*
 
-Write a function arrayOfRgbColors which return any number of RGB colors in an array.
+Write a function convertHexaToRgb which converts hexa color to rgb and it returns an rgb color.
 
 */
 
 //Solution
 
-function arrayOfRgbColors() {
-  let arr = [];
-  let r = Math.floor(Math.random() * 255);
-  let g = Math.floor(Math.random() * 255);
-  let b = Math.floor(Math.random() * 255);
-  arr.push(`rgb(${r},${g},${b})`);
-  console.log(arr);
+function convertHexaToRgb() {
+  let hex =
+    "#" + ((Math.random() * 0xffffff) << 0).toString(16).padStart(6, "0");
+  let result = /^#?([a-f\d]{2})([a-f\d]{2})([a-f\d]{2})$/i.exec(hex);
+  return result
+    ? {
+        hex,
+        r: parseInt(result[1], 16),
+        g: parseInt(result[2], 16),
+        b: parseInt(result[3], 16),
+      }
+    : null;
 }
 
-arrayOfRgbColors();
+console.log(convertHexaToRgb());
