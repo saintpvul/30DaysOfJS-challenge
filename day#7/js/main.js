@@ -2,20 +2,22 @@
 
 /*
 
-Write a function name rgbColorGenerator and it generates rgb colors.
-
-rgbColorGenerator()
-rgb(125,244,255)
+Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
 
 */
 
 //Solution
 
-function randNum(num) {
-  return Math.floor(Math.random() * num);
-}
-function rgbColorGenerator() {
-  return `rgb(${randNum(255)},${randNum(255)},${randNum(255)})`;
+function arrayOfHexaColors() {
+  let arr = [];
+  let hexa =
+    "#" +
+    ((Math.random() * 0xffffff) << 0)
+      .toString(16)
+      .padStart(6, "0")
+      .toUpperCase();
+  arr.push(hexa);
+  console.log(arr);
 }
 
-console.log(rgbColorGenerator());
+arrayOfHexaColors();
