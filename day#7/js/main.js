@@ -2,22 +2,19 @@
 
 /*
 
-Write a function arrayOfHexaColors which return any number of hexadecimal colors in an array.
+Write a function arrayOfRgbColors which return any number of RGB colors in an array.
 
 */
 
 //Solution
 
-function arrayOfHexaColors() {
+function arrayOfRgbColors() {
   let arr = [];
-  let hexa =
-    "#" +
-    ((Math.random() * 0xffffff) << 0)
-      .toString(16)
-      .padStart(6, "0")
-      .toUpperCase();
-  arr.push(hexa);
+  let r = Math.floor(Math.random() * 255);
+  let g = Math.floor(Math.random() * 255);
+  let b = Math.floor(Math.random() * 255);
+  arr.push(`rgb(${r},${g},${b})`);
   console.log(arr);
 }
 
-arrayOfHexaColors();
+arrayOfRgbColors();
