@@ -2,24 +2,27 @@
 
 /*
 
-Write a function called modifyArray takes array as parameter and modifies the fifth item of the array and return the array. If the array length is less than five it return 'item not found'.
+Write a function called isPrime, which checks if a number is prime number.
 
 */
 
 //Solution
 
-function modifyArray(arr) {
-  if (arr.length > 4) {
-    arr[4] = arr[4].toUpperCase();
-    return arr;
-  } else return "item not found";
+function isPrime(num) {
+  if (num === 1) return `not prime`;
+  else if (num === 2) return `prime`;
+  else {
+    for (let i = 2; i < num; i++) {
+      if (num % i === 0) {
+        return "not prime";
+      }
+    }
+    return "prime";
+  }
 }
-console.log(
-  modifyArray(["Avocado", "Tomato", "Potato", "Mango", "Lemon", "Carrot"])
-);
 
-console.log(
-  modifyArray(["Google", "Facebook", "Apple", "Amazon", "Microsoft", "IBM"])
-);
-
-console.log(modifyArray(["Google", "Facebook", "Apple", "Amazon"]));
+console.log(isPrime(1));
+console.log(isPrime(2));
+console.log(isPrime(5));
+console.log(isPrime(10));
+console.log(isPrime(11));
