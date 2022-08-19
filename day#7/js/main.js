@@ -2,27 +2,23 @@
 
 /*
 
-Write a function called isPrime, which checks if a number is prime number.
+Write a functions which checks if all items are unique in the array.
 
 */
 
 //Solution
 
-function isPrime(num) {
-  if (num === 1) return `not prime`;
-  else if (num === 2) return `prime`;
-  else {
-    for (let i = 2; i < num; i++) {
-      if (num % i === 0) {
-        return "not prime";
-      }
+function hasDuplicates(array) {
+  var valuesSoFar = Object.create(null);
+  for (var i = 0; i < array.length; ++i) {
+    var value = array[i];
+    if (value in valuesSoFar) {
+      return `not all items are unique`;
     }
-    return "prime";
+    valuesSoFar[value] = true;
   }
+  return `all items are unique`;
 }
 
-console.log(isPrime(1));
-console.log(isPrime(2));
-console.log(isPrime(5));
-console.log(isPrime(10));
-console.log(isPrime(11));
+console.log(hasDuplicates([1, 2, 3, 4, 5, 6, 7]));
+console.log(hasDuplicates([1, 2, 1, 2, 1]));
