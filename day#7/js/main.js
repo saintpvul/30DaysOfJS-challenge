@@ -2,18 +2,26 @@
 
 /*
 
-Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
+Write a function called reverseCountries, it takes countries array and first it copy the array and returns the reverse of the original array
 
 */
 
 //Solution
 
-function randomSeven() {
-  var arr = [];
-  while (arr.length < 7) {
-    var r = Math.floor(Math.random() * 9) + 1;
-    if (arr.indexOf(r) === -1) arr.push(r);
+function reverseCountries(arr) {
+  let copyArr = [...arr];
+  console.log(`Copy of countries array is ${copyArr}`);
+  for (let i = copyArr.length - 1; i >= 0; i--) {
+    console.log(copyArr[i]);
   }
-  return arr;
 }
-console.log(randomSeven());
+
+reverseCountries([
+  "Finland",
+  "Kazakhstan",
+  "Algeria",
+  "USA",
+  "UAE",
+  "Korea",
+  "Mali",
+]);
