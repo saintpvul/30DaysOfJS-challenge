@@ -2,23 +2,23 @@
 
 /*
 
-Write a functions which checks if all items are unique in the array.
+JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
 
 */
 
 //Solution
 
-function typeCheck(arr) {
-  let checkType = arr.every((elem) => typeof elem == typeof arr[0]);
-  if (checkType) {
-    console.log("Type of all items are the same");
-  } else {
-    console.log("Not all items has the same type");
+function isValidVariable(v) {
+  let regex = /^[a-zA-Z_$][a-zA-Zd_$]*$/;
+  if (v == "" || v == "null") return `var name can't be empty`;
+  else {
+    if (v.match(regex)) return `${v} is valid var name`;
+    else return `${v} is invalid var name`;
   }
 }
 
-typeCheck([1, 2, 3]);
+console.log(isValidVariable(""));
 
-typeCheck(["paul", "jesus", "zeus"]);
+console.log(isValidVariable("newVar"));
 
-typeCheck(["paul", 1, null]);
+console.log(isValidVariable("NEWVAR!"));
