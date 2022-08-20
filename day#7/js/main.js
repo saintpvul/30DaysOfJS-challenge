@@ -2,23 +2,18 @@
 
 /*
 
-JavaScript variable name does not support special characters or symbols except $ or _. Write a function isValidVariable which check if a variable is valid or invalid variable.
+Write a function which returns array of seven random numbers in a range of 0-9. All the numbers must be unique.
 
 */
 
 //Solution
 
-function isValidVariable(v) {
-  let regex = /^[a-zA-Z_$][a-zA-Zd_$]*$/;
-  if (v == "" || v == "null") return `var name can't be empty`;
-  else {
-    if (v.match(regex)) return `${v} is valid var name`;
-    else return `${v} is invalid var name`;
+function randomSeven() {
+  var arr = [];
+  while (arr.length < 7) {
+    var r = Math.floor(Math.random() * 9) + 1;
+    if (arr.indexOf(r) === -1) arr.push(r);
   }
+  return arr;
 }
-
-console.log(isValidVariable(""));
-
-console.log(isValidVariable("newVar"));
-
-console.log(isValidVariable("NEWVAR!"));
+console.log(randomSeven());
