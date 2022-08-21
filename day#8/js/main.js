@@ -2,31 +2,93 @@
 
 /*
 
-Set new properties the dog object: breed, getDogInfo
+Find the person who has many skills in the users usersect.
 
 
 */
 
 // Solution
-const dog = {
-  name: "Otto",
-  legs: 4,
-  color: "black",
-  age: 5,
-  bark: "woof woof",
-  getBark: function () {
-    return `${this.bark}`;
+const users = {
+  Alex: {
+    email: "alex@alex.com",
+    skills: ["HTML", "CSS", "JavaScript"],
+    age: 20,
+    isLoggedIn: false,
+    points: 30,
+  },
+  Asab: {
+    email: "asab@asab.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Redux",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 25,
+    isLoggedIn: false,
+    points: 50,
+  },
+  Brook: {
+    email: "daniel@daniel.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux"],
+    age: 30,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Daniel: {
+    email: "daniel@alex.com",
+    skills: ["HTML", "CSS", "JavaScript", "Python"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  John: {
+    email: "john@john.com",
+    skills: ["HTML", "CSS", "JavaScript", "React", "Redux", "Node.js"],
+    age: 20,
+    isLoggedIn: true,
+    points: 50,
+  },
+  Thomas: {
+    email: "thomas@thomas.com",
+    skills: ["HTML", "CSS", "JavaScript", "React"],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
+  },
+  Paul: {
+    email: "paul@paul.com",
+    skills: [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "MongoDB",
+      "Express",
+      "React",
+      "Node",
+    ],
+    age: 20,
+    isLoggedIn: false,
+    points: 40,
   },
 };
 
-dog.breed = "Pug";
-dog.getDogInfo = function () {
-  return `Look at this cute ${dog.breed}. This is ${dog.name}. He has ${
-    dog.legs
-  } legs. His collor is ${dog.color} and he is ${
-    dog.age
-  }. Did you hear what does ${dog.name} said? ${
-    dog.name
-  } said : ${dog.getBark()}`;
-};
-console.log(dog.getDogInfo());
+const getOwnPropertyNames = Object.getOwnPropertyNames(users);
+
+let newArr = [];
+
+let skills = getOwnPropertyNames.forEach((key) => {
+  newArr.push(users[key].skills);
+});
+
+let findMax = newArr
+  .map((skills) => skills.length)
+  .indexOf(Math.max(...newArr.map((skills) => skills.length)));
+
+console.log(newArr);
+const getMax = Object.keys(users)[findMax];
+console.log(`${getMax} has largest skills stack`);
