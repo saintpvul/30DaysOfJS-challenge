@@ -1,4 +1,4 @@
-// DAY 9
+// DAY 8
 
 /*
 
@@ -15,6 +15,9 @@ const dog = {
   color: "black",
   age: 5,
   bark: "woof woof",
+  getBark: function () {
+    return `${this.bark}`;
+  },
 };
-const bark = Object.keys(dog.bark);
-console.log(bark);
+
+console.log(`Otto said : ${dog.getBark()}`);
