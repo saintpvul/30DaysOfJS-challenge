@@ -2,8 +2,7 @@
 
 /*
 
-Add name, legs, color, age and bark properties for the dog object. The bark property is a method which return woof woof
-!START
+Set new properties the dog object: breed, getDogInfo
 
 
 */
@@ -20,10 +19,14 @@ const dog = {
   },
 };
 
-console.log(
-  `This is ${dog.name}. He has ${dog.legs} legs. His collor is ${
-    dog.color
-  } and he is ${dog.age}. Did you hear what does ${dog.name} said? ${
+dog.breed = "Pug";
+dog.getDogInfo = function () {
+  return `Look at this cute ${dog.breed}. This is ${dog.name}. He has ${
+    dog.legs
+  } legs. His collor is ${dog.color} and he is ${
+    dog.age
+  }. Did you hear what does ${dog.name} said? ${
     dog.name
-  } said : ${dog.getBark()}`
-);
+  } said : ${dog.getBark()}`;
+};
+console.log(dog.getDogInfo());
