@@ -77,18 +77,19 @@ const users = {
   },
 };
 
-const getOwnPropertyNames = Object.getOwnPropertyNames(users);
+let usersAndSkills = [],
+  biggestStack = [];
+for (let user in users) {
+  let values = Object.values(users[user]),
+    stack = 0;
+  usersAndSkills.push([user, values[1]]);
+  for (let i = 0; i < usersAndSkills.length; i++) {
+    if (usersAndSkills[i][1].length > stack) {
+      stack = usersAndSkills[i][1].length;
+      biggestStack.pop();
+      biggestStack.push(usersAndSkills[i]);
+    }
+  }
+}
 
-let newArr = [];
-
-let skills = getOwnPropertyNames.forEach((key) => {
-  newArr.push(users[key].skills);
-});
-
-let findMax = newArr
-  .map((skills) => skills.length)
-  .indexOf(Math.max(...newArr.map((skills) => skills.length)));
-
-console.log(newArr);
-const getMax = Object.keys(users)[findMax];
-console.log(`${getMax} has largest skills stack`);
+console.table([usersAndSkills, biggestStack]);
