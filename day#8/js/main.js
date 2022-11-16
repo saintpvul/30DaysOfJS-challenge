@@ -77,14 +77,18 @@ const users = {
   },
 };
 
-let validUser = [],
-  biggestStack = 0;
+let validUsers = [];
 for (let [key, value] of Object.entries(users)) {
-  if (value.skills.length > biggestStack) {
-    biggestStack = value.skills.length;
-    validUser.pop();
-    validUser.pop();
-    validUser.push(key, value.skills);
+  if (value.isLoggedIn && value.points >= 50) {
+    validUsers.push([key, " is logged in and has points : ", value.points]);
+  } else {
+    validUsers.push([
+      key,
+      (value.isLoggedIn ? " is logged in and " : " is'nt logged in and") +
+        " has just : " +
+        value.points +
+        " points",
+    ]);
   }
 }
-console.log(validUser);
+console.log(validUsers);
