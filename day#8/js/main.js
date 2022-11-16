@@ -77,19 +77,14 @@ const users = {
   },
 };
 
-let usersAndSkills = [],
-  biggestStack = [];
-for (let user in users) {
-  let values = Object.values(users[user]),
-    stack = 0;
-  usersAndSkills.push([user, values[1]]);
-  for (let i = 0; i < usersAndSkills.length; i++) {
-    if (usersAndSkills[i][1].length > stack) {
-      stack = usersAndSkills[i][1].length;
-      biggestStack.pop();
-      biggestStack.push(usersAndSkills[i]);
-    }
+let validUser = [],
+  biggestStack = 0;
+for (let [key, value] of Object.entries(users)) {
+  if (value.skills.length > biggestStack) {
+    biggestStack = value.skills.length;
+    validUser.pop();
+    validUser.pop();
+    validUser.push(key, value.skills);
   }
 }
-
-console.table([usersAndSkills, biggestStack]);
+console.log(validUser);
