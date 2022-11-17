@@ -79,7 +79,7 @@ const users = {
 
 let allUsers = [];
 
-for (let key of Object.keys(users)) {
-  allUsers.push([key]);
+for (let value of Object.values(users)) {
+  allUsers.push([value]);
 }
 console.log(allUsers);
