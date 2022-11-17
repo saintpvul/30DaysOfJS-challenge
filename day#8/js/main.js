@@ -77,15 +77,12 @@ const users = {
   },
 };
 
-let validUsers = [];
-for (let [key, value] of Object.entries(users)) {
-  if (
-    value.skills.includes("MongoDB") &&
-    value.skills.includes("Express") &&
-    value.skills.includes("React") &&
-    value.skills.includes("Node")
-  ) {
-    validUsers.push([key]);
-  }
-}
-console.log(validUsers);
+users.Paul2 = {
+  email: "www.schwetz@gmail.com",
+  skills: ["HTML", "CSS", "JavaScript"],
+  age: 27,
+  isLoggedIn: false,
+  points: 50,
+};
+
+console.log(users);
