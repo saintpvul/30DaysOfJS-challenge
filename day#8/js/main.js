@@ -79,16 +79,13 @@ const users = {
 
 let validUsers = [];
 for (let [key, value] of Object.entries(users)) {
-  if (value.isLoggedIn && value.points >= 50) {
-    validUsers.push([key, " is logged in and has points : ", value.points]);
-  } else {
-    validUsers.push([
-      key,
-      (value.isLoggedIn ? " is logged in and " : " is'nt logged in and") +
-        " has just : " +
-        value.points +
-        " points",
-    ]);
+  if (
+    value.skills.includes("MongoDB") &&
+    value.skills.includes("Express") &&
+    value.skills.includes("React") &&
+    value.skills.includes("Node")
+  ) {
+    validUsers.push([key]);
   }
 }
 console.log(validUsers);
