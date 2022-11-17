@@ -2023,4 +2023,4 @@ for (let values of Object.values(countries)) {
   ]);
 }
 
-console.log(countiesInfoList);
+console.table(countiesInfoList);
