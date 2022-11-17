@@ -77,12 +77,9 @@ const users = {
   },
 };
 
-users.Paul2 = {
-  email: "www.schwetz@gmail.com",
-  skills: ["HTML", "CSS", "JavaScript"],
-  age: 27,
-  isLoggedIn: false,
-  points: 50,
-};
+let allUsers = [];
 
-console.log(users);
+for (let [key, property] of Object.entries(users)) {
+  allUsers.push([key]);
+}
+console.log(allUsers);
