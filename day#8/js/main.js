@@ -1,52 +1,72 @@
-const personAccount = {
-  firstName: "Paul",
-  lastName: "Shvets",
-  incomes: {
-    salary: 2000,
-    bonuses: 300,
+const users = [
+  {
+    _id: "ab12ex",
+    username: "Alex",
+    email: "alex@alex.com",
+    password: "123123",
+    createdAt: "08/01/2020 9:00 AM",
+    isLoggedIn: false,
   },
-  expenses: {
-    apartment: 1300,
-    food: 200,
-    gas: 70,
+  {
+    _id: "fg12cy",
+    username: "Asab",
+    email: "asab@asab.com",
+    password: "123456",
+    createdAt: "08/01/2020 9:30 AM",
+    isLoggedIn: true,
   },
-  totalIncome: function () {
-    return `${Object.keys(this.incomes)} for ${Object.values(
-      this.incomes
-    ).reduce((s, v) => (s += v), 0)}`;
+  {
+    _id: "zwf8md",
+    username: "Brook",
+    email: "brook@brook.com",
+    password: "123111",
+    createdAt: "08/01/2020 9:45 AM",
+    isLoggedIn: true,
   },
-  totalExpense: function () {
-    return `${Object.keys(this.expenses)} for ${Object.values(
-      this.expenses
-    ).reduce((s, v) => (s += v), 0)}`;
+  {
+    _id: "eefamr",
+    username: "Martha",
+    email: "martha@martha.com",
+    password: "123222",
+    createdAt: "08/01/2020 9:50 AM",
+    isLoggedIn: false,
   },
-  accountInfo: function () {
-    return `${this.lastName}, ${this.firstName}. ${this.accountBalance()}`;
+  {
+    _id: "ghderc",
+    username: "Thomas",
+    email: "thomas@thomas.com",
+    password: "123333",
+    createdAt: "08/01/2020 10:00 AM",
+    isLoggedIn: false,
   },
-  addIncome: function (s, v) {
-    this.incomes[s] = v;
-  },
-  addExpenses: function (s, v) {
-    this.incomes[s] = v;
-  },
-  accountBalance: function () {
-    return `Income is: ${this.totalIncome()}, expenses is: ${this.totalExpense()}. Available funds: ${
-      Object.values(this.incomes).reduce((s, v) => (s += v), 0) -
-      Object.values(this.expenses).reduce((s, v) => (s += v), 0)
-    }`;
-  },
-};
+];
 
-personAccount.addIncome("stock", 1200);
-personAccount.addExpenses("taxes", 400);
-
-console.log(personAccount.firstName);
-console.log(personAccount.lastName);
-
-console.log(personAccount.incomes);
-console.log(personAccount.expenses);
-console.log(personAccount.accountBalance());
-console.log(personAccount.totalIncome());
-console.log(personAccount.totalExpense());
-
-console.log(personAccount.accountInfo());
+const products = [
+  {
+    _id: "eedfcf",
+    name: "mobile phone",
+    description: "Huawei Honor",
+    price: 200,
+    ratings: [
+      { userId: "fg12cy", rate: 5 },
+      { userId: "zwf8md", rate: 4.5 },
+    ],
+    likes: [],
+  },
+  {
+    _id: "aegfal",
+    name: "Laptop",
+    description: "MacPro: System Darwin",
+    price: 2500,
+    ratings: [],
+    likes: ["fg12cy"],
+  },
+  {
+    _id: "hedfcg",
+    name: "TV",
+    description: "Smart TV:Procaster",
+    price: 400,
+    ratings: [{ userId: "fg12cy", rate: 5 }],
+    likes: ["fg12cy"],
+  },
+];
