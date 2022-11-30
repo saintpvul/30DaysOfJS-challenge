@@ -70,3 +70,49 @@ const products = [
     likes: ["fg12cy"],
   },
 ];
+
+function signUp() {
+  let login = "",
+    name = "",
+    mail = "",
+    pass = "";
+  login = prompt("Enter your login:");
+  login = login.trim().split(" ").join("");
+  for (let user of users) {
+    if (login.length < 1 && !login) return signUp();
+    if (user._id.indexOf(login) != -1) {
+      return signIn();
+    }
+  }
+  pass = prompt(`Welcome ${login}! Please create a pass: `);
+  if (/^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])[A-Za-z0-9]{6,}$/.test(pass)) {
+    name = prompt("Nice pass! What is your name?");
+  } else {
+    alert("Badly pass");
+    return signUp();
+  }
+  mail = prompt(`Nice to meet you, ${name}. Enter your email!`);
+  let newUser = { _id: login, username: name, email: mail, password: pass };
+  users.push(newUser);
+  return users[users.length - 1];
+}
+
+signUp();
+
+console.log(users);
+
+function signIn() {
+  let login = prompt("Enter your login:"),
+    pass = "";
+  for (let user of users) {
+    if (user._id.indexOf(login) != -1) {
+      pass = prompt(
+        `I need to verify your password. Please, enter your pass here:`
+      );
+      if (user[user._id.indexOf(login)].password === pass) {
+        console.log("huy");
+      }
+    }
+  }
+}
+console.log(signIn());
