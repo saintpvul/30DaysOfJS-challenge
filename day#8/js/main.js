@@ -99,20 +99,41 @@ function signUp() {
 
 signUp();
 
-console.log(users);
-
 function signIn() {
-  let login = prompt("Enter your login:"),
+  let login = "",
     pass = "";
+
+  function getLogin() {
+    let log = prompt("Enter your login:");
+    login = log;
+  }
+
+  function getPass() {
+    let password = prompt(
+      "I need to verify your password. Please, enter your pass here:"
+    );
+    pass = password;
+  }
+
+  getLogin();
+
   for (let user of users) {
     if (user._id.indexOf(login) != -1) {
-      pass = prompt(
-        `I need to verify your password. Please, enter your pass here:`
-      );
-      if (user[user._id.indexOf(login)].password === pass) {
-        console.log("huy");
+      getPass();
+
+      if (users[user._id.indexOf(login)].password === pass) {
+        return `Welcome back, ${
+          login[0].toUpperCase() + login.slice(1, login.length - 1)
+        }!`;
+      } else {
+        alert(`Wrong pass. Try again!`);
+        return signIn();
       }
+    } else {
+      alert("I can't find your account. Try again!");
+      return signIn();
     }
   }
 }
-console.log(signIn());
+
+signIn();
