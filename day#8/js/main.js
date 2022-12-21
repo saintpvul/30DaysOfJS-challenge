@@ -78,10 +78,11 @@ The products array has three elements and each of them has six properties. a. Cr
 */
 
 function rateProduct() {
-  let user = prompt("Enter your id: ") || "Unknown",
+  let userId = prompt("Enter your id: ") || "Unknown",
     prod = "",
     idx = 0,
-    rate = 0;
+    rate = 0,
+    average = 0;
 
   function getProduct() {
     let product = prompt("Which product do you want to rate?");
@@ -120,21 +121,52 @@ function rateProduct() {
     }
   }
 
+  function averageRating() {
+    let rates = 0;
+    if (!products[0].ratings) {
+      alert("This product was'nt rated at all");
+    } else {
+      for (let i = 0; i < products[idx].ratings.length; i++) {
+        rates += products[idx].ratings[i].rate;
+      }
+      average = rates / products[idx].ratings.length;
+    }
+  }
+
   getProduct();
 
   if (prod) {
     getRate();
   }
 
-  if (rate) {
-    products[idx].ratings.push({ user, rate });
+  if (!rate && !prod) {
+    alert("Ok. bye!");
   } else {
-    alert(
-      `I still do not have your rate for ${prod}\nEnter your rate, please!`
-    );
-    getRate();
+    if (!rate) {
+      alert(
+        `I still do not have your rate for ${prod}\nEnter your rate, please!`
+      );
+      getRate();
+    } else if (!prod) {
+      alert(`I still do not have product! \nEnter your product, please!`);
+      getProduct();
+    } else {
+      products[idx].ratings.push({ userId, rate });
+      if (
+        confirm("Do you want to check average rating of current product?") ===
+        true
+      ) {
+        averageRating();
+        alert(
+          `Average rating for ${products[idx].description} is ${parseFloat(
+            average
+          )}`
+        );
+      } else {
+        alert("You welcome! Bye");
+      }
+    }
   }
-  console.log(products[idx].ratings);
 }
 
 rateProduct();
